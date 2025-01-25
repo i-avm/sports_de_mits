@@ -7,7 +7,7 @@ const cards = [
   {
     image: 'https://d29fhpw069ctt2.cloudfront.net/photo/53128/preview/carrom-board-coins_preview_5e42.jpg',
     title: 'Carroms',
-    text: 'Carroms Fixtures, Results, etc. etc',
+    text: 'Stay updated with the latest Carroms fixtures, match results, and tournament stats!',
     button: 'View',
     redirect: '/carroms'
   },

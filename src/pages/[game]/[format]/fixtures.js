@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import GlootTheme from "@/utils/themes/gloot-theme";
 import WhiteTheme from "@/utils/themes/white-theme";
-import useWindowSize from '../../../utils/functions'
+import useWindowSize from "../../../utils/functions";
 
 export default function Fixtures() {
   const router = useRouter();
@@ -16,6 +16,7 @@ export default function Fixtures() {
 
   const [fixturesData, setFixturesData] = useState(null); // Default to null to indicate no data loaded yet
   const [isFixtureLoaded, setIsFixtureLoaded] = useState(false); // React state for tracking load completion
+  const [isDarkMode, setIsDarkMode] = useState(false); // Track dark/light mode
 
   useEffect(() => {
     if (!game || !format) return;
@@ -70,7 +71,11 @@ export default function Fixtures() {
 
   return (
     <>
-      <FloatingButton />
+      <FloatingButton
+        isDarkLightOptionEnabled={true}
+        isDarkMode={isDarkMode}
+        onToggleDarkMode={() => setIsDarkMode(!isDarkMode)}
+      />
       <header>
         <h1>
           {format?.charAt(0).toUpperCase() + format?.slice(1)} -{" "}
@@ -80,11 +85,19 @@ export default function Fixtures() {
           <SingleEliminationBracket
             matches={fixturesData}
             matchComponent={Match}
-            theme={WhiteTheme}
+            theme={isDarkMode ? GlootTheme : WhiteTheme}
             svgWrapper={({ children, ...props }) => (
               <SVGViewer
-                background={WhiteTheme.svgBackground}
-                SVGBackground={WhiteTheme.svgBackground}
+                background={
+                  isDarkMode
+                    ? GlootTheme.svgBackground
+                    : WhiteTheme.svgBackground
+                }
+                SVGBackground={
+                  isDarkMode
+                    ? GlootTheme.svgBackground
+                    : WhiteTheme.svgBackground
+                }
                 width={finalWidth}
                 height={finalHeight}
                 {...props}
@@ -101,7 +114,7 @@ export default function Fixtures() {
           <p>Loading fixtures...</p>
         )}
         <br />
-        <p>© Sports de Mitsogo</p>
+        <p style={{ fontWeight: 400, color: "#b5838d" }}>© Sports de Mitsogo</p>
       </header>
     </>
   );

@@ -1,31 +1,41 @@
-import "../app/scss/floating_button.scss"
-import 'font-awesome/css/font-awesome.min.css';
+import "../app/scss/floating_button.scss";
+import "font-awesome/css/font-awesome.min.css";
 
 import Link from "next/link";
 
-function FloatingButton() {
+function FloatingButton({
+  isDarkLightOptionEnabled,
+  isDarkMode,
+  onToggleDarkMode,
+}) {
   const handleBackClick = () => {
-    window.history.back()
-  }
+    window.history.back();
+  };
   return (
-    <div class="adminActions">
-      <input type="checkbox" name="adminToggle" class="adminToggle" />
-      <a class="adminButton" href="#!">
-        <i class="fa fa-cog"></i>
+    <div className="adminActions">
+      <input type="checkbox" name="adminToggle" className="adminToggle" />
+      <a className="adminButton" href="#!">
+        <i className="fa fa-cog"></i>
       </a>
-      <div class="adminButtons">
+      <div className="adminButtons">
         <Link href="/" title="Home">
-          <i class="fa fa-home"></i>
+          <i className="fa fa-home"></i>
         </Link>
         <Link href="" title="Back" onClick={handleBackClick}>
-          <i class="fa fa-arrow-left"></i>
+          <i className="fa fa-arrow-left"></i>
         </Link>
-        <Link href="" title="Dark/Light Mode">
-          <i class="fa fa-moon-o"></i>
-        </Link>
+        {isDarkLightOptionEnabled && (
+          <a href="#" onClick={onToggleDarkMode} title="Dark/Light Mode">
+            {isDarkMode ? (
+              <i className="fa fa-sun-o"></i>
+            ) : (
+              <i className="fa fa-moon-o"></i>
+            )}
+          </a>
+        )}
       </div>
     </div>
   );
 }
 
-export default FloatingButton
+export default FloatingButton;

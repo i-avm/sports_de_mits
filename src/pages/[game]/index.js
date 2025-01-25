@@ -7,7 +7,7 @@ import FloatingButton from "@/components/FloatingButton";
 export default function Game() {
   return (
     <div className="page-game">
-      <FloatingButton />
+      <FloatingButton isDarkLightOptionEnabled={false} />
       <header>
         <h1>
           CARROMS
