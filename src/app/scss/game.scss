@@ -1,0 +1,117 @@
+// TYPOGRAPHY
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,700");
+$main-font: "Work Sans";
+$font-col: #fffff2;
+
+// COLORS
+// Grayscale:
+$white: #fff;
+$gray: #777;
+$black: #000;
+// Palette:
+$palette: #ffcdb2, #ffb4a2, #e5989b, #b5838d, #6d6875;
+
+// Helper to use your palette
+@function palette($col) {
+  @return nth($palette, $col);
+}
+
+// GENERAL
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.page-game {
+  body {
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 300;
+    color: $font-col;
+    background-color: #fffff2;
+  }
+
+  // DEMO STYLES
+  header {
+    padding: 1rem;
+    text-align: center;
+    .wrap-logo {
+      position: relative;
+      width: 100px;
+      margin: 2rem auto 0;
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        width: 15px;
+        height: 15px;
+        background: darken(palette(3), 30%);
+        border-radius: 50%;
+        opacity: 0;
+        animation: pulse 1.5s linear alternate infinite;
+      }
+    }
+    svg {
+      width: 100%;
+      height: auto;
+      animation: rotate 15s linear infinite;
+      path {
+        fill: palette(4);
+      }
+    }
+    h1 {
+      color: black;
+      font-size: 96px;
+    }
+    block {
+      display: inline-block;
+      width: 250px;
+      margin: 2rem 0;
+      padding: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 24px;
+      color: $black;
+      background: palette(4);
+      box-shadow: 0 10px 10px -10px rgba($black, 0.1);
+      transition: transform 0.4s;
+      &:hover {
+        animation: float 1s linear infinite alternate;
+      }
+    }
+    p {
+      font-weight: 400;
+      color: palette(4);
+    }
+  }
+}
+
+// ANIMATIONS
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes pulse {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-0.5rem);
+  }
+}
