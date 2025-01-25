@@ -24,12 +24,12 @@ export default function Fixtures() {
         switch (game) {
           case "carroms":
             switch (format) {
-              case "mens":
-                const { carromsMensFixtures } = await import(
-                  "@/data/carroms/mens"
-                );
-                setFixturesData(carromsMensFixtures);
-                break;
+              // case "mens":
+              //   const { carromsMensFixtures } = await import(
+              //     "@/data/carroms/mens"
+              //   );
+              //   setFixturesData(carromsMensFixtures);
+              //   break;
 
               case "womens":
                 const { carromsWomensFixtures } = await import(
@@ -38,12 +38,12 @@ export default function Fixtures() {
                 setFixturesData(carromsWomensFixtures);
                 break;
 
-              case "mixed":
-                const { carromsMixedFixtures } = await import(
-                  "@/data/carroms/mixed"
-                );
-                setFixturesData(carromsMixedFixtures);
-                break;
+              // case "mixed":
+              //   const { carromsMixedFixtures } = await import(
+              //     "@/data/carroms/mixed"
+              //   );
+              //   setFixturesData(carromsMixedFixtures);
+              //   break;
 
               default:
                 setFixturesData([]);
@@ -51,29 +51,29 @@ export default function Fixtures() {
             }
             break;
 
-          case "chess":
-            switch (format) {
-              case "mens":
-                const { chessMensFixtures } = await import("@/data/chess/mens");
-                setFixturesData(chessMensFixtures);
-                break;
+          // case "chess":
+          //   switch (format) {
+          //     case "mens":
+          //       const { chessMensFixtures } = await import("@/data/chess/mens");
+          //       setFixturesData(chessMensFixtures);
+          //       break;
 
-              case "womens":
-                const { chessWomensFixtures } = await import(
-                  "@/data/chess/womens"
-                );
-                setFixturesData(chessWomensFixtures);
-                break;
+          //     case "womens":
+          //       const { chessWomensFixtures } = await import(
+          //         "@/data/chess/womens"
+          //       );
+          //       setFixturesData(chessWomensFixtures);
+          //       break;
 
-              default:
-                setFixturesData([]);
-                break;
-            }
-            break;
+          //     default:
+          //       setFixturesData([]);
+          //       break;
+          //   }
+          //   break;
 
-          default:
-            setFixturesData([]);
-            break;
+          // default:
+          //   setFixturesData([]);
+          //   break;
         }
       } catch (error) {
         console.error("Error loading fixtures data:", error);

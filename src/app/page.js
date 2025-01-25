@@ -29,24 +29,24 @@ const Card = ({ image, title, text, button,redirect }) => (
   </a>
 );
 
-const DarkMode = ({ theme, setTheme }) => {
-  const toggleTheme = () => {
-    setTheme(theme === 'theme-light' ? 'theme-dark' : 'theme-light');
-  };
+// const DarkMode = ({ theme, setTheme }) => {
+//   const toggleTheme = () => {
+//     setTheme(theme === 'theme-light' ? 'theme-dark' : 'theme-light');
+//   };
 
-  useEffect(() => {
-    localStorage.setItem('theme', theme);
-    document.body.className = theme;
-  }, [theme]);
+//   useEffect(() => {
+//     localStorage.setItem('theme', theme);
+//     document.body.className = theme;
+//   }, [theme]);
 
-  return (
-    <button className="dark-mode" onClick={toggleTheme}>
-      <span>Toggle {theme === 'theme-light' ? 'Dark Mode' : 'Light Mode'}</span>
-    </button>
-  );
-};
+//   return (
+//     <button className="dark-mode" onClick={toggleTheme}>
+//       <span>Toggle {theme === 'theme-light' ? 'Dark Mode' : 'Light Mode'}</span>
+//     </button>
+//   );
+// };
 
-const Header = ({ theme, setTheme }) => (
+const Header = () => (
   <header className="home-header">
     <div className="grid-container">
       <div className="grid-x align-justify align-middle">
@@ -64,11 +64,11 @@ const Header = ({ theme, setTheme }) => (
 );
 
 const Page = () => {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'theme-light');
+  // const [theme, setTheme] = useState(localStorage.getItem('theme') || 'theme-light');
 
   return (
     <>
-      <Header theme={theme} setTheme={setTheme} />
+      <Header />
       <div className="grid-container">
         <div className="grid-x grid-padding-x grid-margin-y">
           {cards.map((card, index) => (
