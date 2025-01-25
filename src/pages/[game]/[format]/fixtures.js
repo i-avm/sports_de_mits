@@ -6,7 +6,9 @@ import {
 } from "@g-loot/react-tournament-brackets";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-
+import GlootTheme from "@/utils/themes/gloot-theme";
+import WhiteTheme from "@/utils/themes/white-theme";
+import useWindowSize from '../../../utils/functions'
 
 export default function Fixtures() {
   const router = useRouter();
@@ -24,12 +26,12 @@ export default function Fixtures() {
         switch (game) {
           case "carroms":
             switch (format) {
-              // case "mens":
-              //   const { carromsMensFixtures } = await import(
-              //     "@/data/carroms/mens"
-              //   );
-              //   setFixturesData(carromsMensFixtures);
-              //   break;
+              case "mens":
+                const { carromsMensFixtures } = await import(
+                  "@/data/carroms/mens"
+                );
+                setFixturesData(carromsMensFixtures);
+                break;
 
               case "womens":
                 const { carromsWomensFixtures } = await import(
@@ -38,53 +40,33 @@ export default function Fixtures() {
                 setFixturesData(carromsWomensFixtures);
                 break;
 
-              // case "mixed":
-              //   const { carromsMixedFixtures } = await import(
-              //     "@/data/carroms/mixed"
-              //   );
-              //   setFixturesData(carromsMixedFixtures);
-              //   break;
+              case "mixed":
+                const { carromsMixedFixtures } = await import(
+                  "@/data/carroms/mixed"
+                );
+                setFixturesData(carromsMixedFixtures);
+                break;
 
               default:
                 setFixturesData([]);
                 break;
             }
             break;
-
-          // case "chess":
-          //   switch (format) {
-          //     case "mens":
-          //       const { chessMensFixtures } = await import("@/data/chess/mens");
-          //       setFixturesData(chessMensFixtures);
-          //       break;
-
-          //     case "womens":
-          //       const { chessWomensFixtures } = await import(
-          //         "@/data/chess/womens"
-          //       );
-          //       setFixturesData(chessWomensFixtures);
-          //       break;
-
-          //     default:
-          //       setFixturesData([]);
-          //       break;
-          //   }
-          //   break;
-
-          // default:
-          //   setFixturesData([]);
-          //   break;
         }
       } catch (error) {
         console.error("Error loading fixtures data:", error);
         setFixturesData([]);
       } finally {
-        setIsFixtureLoaded(true); // Ensure this is updated after loading finishes
+        setIsFixtureLoaded(true);
       }
     }
 
     loadData();
   }, [game, format]);
+
+  const [width, height] = useWindowSize();
+  const finalWidth = Math.max(width - 50, 500);
+  const finalHeight = Math.max(height - 100, 500);
 
   return (
     <>
@@ -98,8 +80,15 @@ export default function Fixtures() {
           <SingleEliminationBracket
             matches={fixturesData}
             matchComponent={Match}
+            theme={WhiteTheme}
             svgWrapper={({ children, ...props }) => (
-              <SVGViewer width={1920} height={720} {...props}>
+              <SVGViewer
+                background={WhiteTheme.svgBackground}
+                SVGBackground={WhiteTheme.svgBackground}
+                width={finalWidth}
+                height={finalHeight}
+                {...props}
+              >
                 {children}
               </SVGViewer>
             )}

@@ -1,4 +1,4 @@
-export const carromsWomensFixtures = [
+export const defaultFixture = [
   {
     id: "F1",
     name: "Final - Match",
