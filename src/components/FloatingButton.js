@@ -20,6 +20,9 @@ function FloatingButton() {
         <Link href="" title="Back" onClick={handleBackClick}>
           <i class="fa fa-arrow-left"></i>
         </Link>
+        <Link href="" title="Dark/Light Mode">
+          <i class="fa fa-moon-o"></i>
+        </Link>
       </div>
     </div>
   );
