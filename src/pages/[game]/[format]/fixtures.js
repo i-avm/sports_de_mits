@@ -68,6 +68,12 @@ export default function Fixtures() {
   const [width, height] = useWindowSize();
   const finalWidth = Math.max(width - 50, 500);
   const finalHeight = Math.max(height - 100, 500);
+  const onMatchClickH = () => {
+    debugger
+  }
+  const onPartyClickH = () => {
+    debugger
+  }
 
   return (
     <>
@@ -85,6 +91,8 @@ export default function Fixtures() {
           <SingleEliminationBracket
             matches={fixturesData}
             matchComponent={Match}
+            onMatchClick={onMatchClickH}
+            onPartyClick={onPartyClickH}
             theme={isDarkMode ? GlootTheme : WhiteTheme}
             svgWrapper={({ children, ...props }) => (
               <SVGViewer

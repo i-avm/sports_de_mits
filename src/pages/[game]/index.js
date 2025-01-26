@@ -8,7 +8,7 @@ export default function Game() {
   return (
     <div className="page-game">
       <FloatingButton isDarkLightOptionEnabled={false} />
-      <header>
+      <header style={{display: "grid"}}>
         <h1>
           CARROMS
           <br />
