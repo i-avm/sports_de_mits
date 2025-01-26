@@ -29,8 +29,7 @@ const cards = [
     redirect: "/badminton",
   },
   {
-    image:
-      "https://lh3.googleusercontent.com/proxy/AtbfNi4HuBJPnYRWC5eOyiYpWFrIwqa_vigaexQK7U7_iyavGySy6qsZXrzeY3c599tASizO3ybi7QvniVZu1--GwjRkW0FHhUorU_kzGkY1F0hOvTf0ZIrpioZD8D0eW6dXeLfxWwuuoKmAx0Q7_XThazJzGw",
+    image: "https://c4.wallpaperflare.com/wallpaper/956/865/266/football-player-jump-wallpaper-preview.jpg",
     title: "Football",
     text: "Coming Soon! Stay tuned with us!",
     button: "🔒",
