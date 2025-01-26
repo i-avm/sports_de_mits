@@ -34,3 +34,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+###
+
+- Normal GIT push from CS-MobA space to Gitlab project
+- Pull the Gitlab repo on the abin.mitsogo.dev ~/Projects/sde_mits/sports_de_mits_github/sports_de_mitsogo
+- Might need to mention rebase rule while pulling
+- Push to Github repo using
+> $ git push --all github --force
+
+> $ git push --tags github --force ( if needed )
