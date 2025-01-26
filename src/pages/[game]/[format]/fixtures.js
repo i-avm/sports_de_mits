@@ -12,8 +12,6 @@ import useWindowSize from "../../../utils/functions";
 import { motion } from "framer-motion";
 import Confetti from "react-confetti";
 import "../../../app/scss/fixture.scss";
-
-// Additional import for mobile-friendly animation (if needed)
 import { useSpring, animated } from "react-spring";
 
 export default function Fixtures() {
@@ -30,7 +28,19 @@ export default function Fixtures() {
   const finalWidth = Math.max(width - 50, 500);
   const finalHeight = Math.max(height - 175, 500);
 
-  const isMobile = width <= 768; // Example threshold for mobile
+  useEffect(() => {
+    // Load dark mode preference from localStorage
+    const savedDarkMode = localStorage.getItem("darkMode");
+    if (savedDarkMode) {
+      setIsDarkMode(savedDarkMode === "true");
+    }
+  }, []);
+
+  const handleToggleDarkMode = () => {
+    const newDarkModeState = !isDarkMode;
+    setIsDarkMode(newDarkModeState);
+    localStorage.setItem("darkMode", newDarkModeState); // Save preference
+  };
 
   useEffect(() => {
     if (!game || !format) return;
@@ -111,7 +121,7 @@ export default function Fixtures() {
       <FloatingButton
         isDarkLightOptionEnabled={true}
         isDarkMode={isDarkMode}
-        onToggleDarkMode={() => setIsDarkMode(!isDarkMode)}
+        onToggleDarkMode={handleToggleDarkMode}
       />
       <header className="fixture_header">
         <h1 className="fixture_title">
@@ -275,13 +285,13 @@ export default function Fixtures() {
                   style={{
                     fontWeight: "bold",
                     fontSize: "1.5rem",
-                    color: "#34D399",
+                    color: "teal",
                   }}
                 >
                   of the mighty{" "}
                   <span
                     style={{
-                      color: "#FFD700",
+                      color: "teal",
                       fontWeight: "bold",
                       textTransform: "uppercase",
                       fontSize: "1.7rem",
