@@ -131,7 +131,7 @@ export default function Fixtures() {
         <p>Loading fixtures...</p>
       )}
       <br />
-      <p style={{ fontWeight: 400, color: "#b5838d" }}>© Sports de Mitsogo</p>
+      <p style={{ fontWeight: 400, color: "#b5838d", display:"flex", justifyContent:"center" }}>© Sports de Mitsogo</p>
 
       {/* Match Details Overlay */}
       {selectedMatch && (

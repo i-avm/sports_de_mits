@@ -44,6 +44,13 @@ const cards = [
     button: "🔒",
     redirect: "/cricket",
   },
+  {
+    image: "https://www.uxade.com/assets/images/z-andmore-506x300.png",
+    title: "🤩",
+    text: "",
+    button: "🔒",
+    redirect: "",
+  },
   // other cards...
 ];
 
@@ -55,12 +62,13 @@ const Card = ({ image, title, text, button, redirect }) => (
     <h2 className="card__title">{title}</h2>
     <div className="card__content">
       <p>{text}</p>
-      <Link
-        disabled={button != "View"}
-        href={button == "View" ? redirect : "#"}
-      >
+      {button == "View" ? (
+        <Link href={redirect}>
+          <span>{button}</span>
+        </Link>
+      ) : (
         <span>{button}</span>
-      </Link>
+      )}
     </div>
   </div>
 );
@@ -92,6 +100,7 @@ const Header = () => (
           </h1>
         </div>
         <div className="cell">
+          <img src="/club-logo.jpeg" alt="SDM" width={80} height={80}/>
           {/* <DarkMode theme={theme} setTheme={setTheme} /> */}
         </div>
       </div>
