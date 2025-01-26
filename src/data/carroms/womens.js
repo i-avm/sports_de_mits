@@ -7,7 +7,26 @@ export const carromsWomensFixtures = [
     tournamentRoundText: "4",
     startTime: "2021-05-30",
     state: null,
-    participants: [],
+    participants: [
+      {
+        id: "1",
+        resultText: null,
+        isWinner: true,
+        status: null,
+        name: "B1",
+        house: "Phoenix",
+        picture: null,
+      },
+      {
+        id: "2",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        name: "C1",
+        house: "Aquila",
+        picture: null,
+      },
+    ],
   },
   {
     id: "SF_M1",

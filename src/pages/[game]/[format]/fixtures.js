@@ -11,7 +11,10 @@ import WhiteTheme from "@/utils/themes/white-theme";
 import useWindowSize from "../../../utils/functions";
 import { motion } from "framer-motion";
 import Confetti from "react-confetti";
-import '../../../app/scss/fixture.scss'
+import "../../../app/scss/fixture.scss";
+
+// Additional import for mobile-friendly animation (if needed)
+import { useSpring, animated } from "react-spring";
 
 export default function Fixtures() {
   const router = useRouter();
@@ -19,11 +22,15 @@ export default function Fixtures() {
 
   const [fixturesData, setFixturesData] = useState(null);
   const [isFixtureLoaded, setIsFixtureLoaded] = useState(false);
+  const [isFinalsShowing, setIsFinalsShowing] = useState(false);
+
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [selectedMatch, setSelectedMatch] = useState(null); // Track selected match details
   const [width, height] = useWindowSize(); // Dynamically get window size
   const finalWidth = Math.max(width - 50, 500);
   const finalHeight = Math.max(height - 175, 500);
+
+  const isMobile = width <= 768; // Example threshold for mobile
 
   useEffect(() => {
     if (!game || !format) return;
@@ -71,13 +78,33 @@ export default function Fixtures() {
     loadData();
   }, [game, format]);
 
+  useEffect(() => {
+    if (fixturesData && fixturesData.length > 0) {
+      const finalMatch = fixturesData.filter(
+        (fixture) => fixture.id == "F1"
+      )[0];
+      debugger;
+      if (finalMatch.participants?.some((p) => p.isWinner)) {
+        setSelectedMatch(finalMatch); //
+        setIsFinalsShowing(true);
+      }
+    }
+  }, [fixturesData]);
+
   const onMatchClickHandler = (match) => {
+    setIsFinalsShowing(false);
     setSelectedMatch(match?.match);
   };
 
   const handleCloseOverlay = () => {
     setSelectedMatch(null); // Close overlay
   };
+
+  // For mobile devices, use a simpler animation (use react-spring)
+  const overlayAnimation = useSpring({
+    opacity: selectedMatch ? 1 : 0,
+    transform: selectedMatch ? "scale(1)" : "scale(0.8)",
+  });
 
   return (
     <>
@@ -86,12 +113,9 @@ export default function Fixtures() {
         isDarkMode={isDarkMode}
         onToggleDarkMode={() => setIsDarkMode(!isDarkMode)}
       />
-      <header class="fixture_header">
-        <h1 class="fixture_title">
-          {/* {format?.charAt(0).toUpperCase() + format?.slice(1)} -{" "}
-          {game?.charAt(0).toUpperCase() + game?.slice(1)}  */}
-          {format} - {game}&nbsp;
-          Fixtures
+      <header className="fixture_header">
+        <h1 className="fixture_title">
+          {format} - {game} Fixtures
         </h1>
       </header>
 
@@ -131,15 +155,22 @@ export default function Fixtures() {
         <p>Loading fixtures...</p>
       )}
       <br />
-      <p style={{ fontWeight: 400, color: "#b5838d", display:"flex", justifyContent:"center" }}>© Sports de Mitsogo</p>
+      <p
+        style={{
+          fontWeight: 400,
+          color: "#b5838d",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        © Sports de Mitsogo
+      </p>
 
       {/* Match Details Overlay */}
       {selectedMatch && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+        <animated.div
           style={{
+            ...overlayAnimation,
             position: "fixed",
             top: 0,
             left: 0,
@@ -158,9 +189,9 @@ export default function Fixtures() {
             <Confetti
               width={width}
               height={height}
-              numberOfPieces={5000}
+              numberOfPieces={isFinalsShowing ? 5000 : 1000}
               initialVelocityY={{ min: 1, max: 10 }}
-              gravity={0.08}
+              gravity={isFinalsShowing ? 0.08 : 0.1}
               recycle={false}
             />
           )}
@@ -190,95 +221,152 @@ export default function Fixtures() {
                 color: isDarkMode ? "#60a5fa" : "#2563eb",
               }}
             >
-              {selectedMatch.name || "Match Details"}
+              {isFinalsShowing ? (
+                <>
+                  <p
+                    style={{
+                      fontSize: "1.1rem",
+                      fontStyle: "italic",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                  >
+                    🌟 The Champions are! 🏆
+                  </p>
+                  <span style={{ display: "flex", justifyContent: "center" }}>
+                    `🎉&nbsp;
+                    {
+                      selectedMatch.participants.find((p) => p.isWinner)?.name
+                    }{" "}
+                    🏆`
+                  </span>
+                </>
+              ) : (
+                selectedMatch.name || "Match Details"
+              )}
             </h2>
 
-            <div
-              style={{
-                fontSize: "1.2rem",
-                lineHeight: "1.6",
-                marginBottom: "20px",
-              }}
-            >
-              {/* Match Information */}
-              <p>
-                <strong>Start Time:</strong>{" "}
-                {new Date(selectedMatch.startTime).toLocaleString()}
-              </p>
-              <p>
-                <strong>Team A:</strong> {selectedMatch.participants[0]?.name}{" "}
-                <span
+            {isFinalsShowing ? (
+              <div
+                style={{
+                  fontSize: "1.2rem",
+                  lineHeight: "1.6",
+                  marginBottom: "20px",
+                  textAlign: "center",
+                }}
+              >
+                <p
                   style={{
-                    background:
-                      selectedMatch.participants[0]?.house === "Phoenix"
-                        ? "#FFBF00"
-                        : selectedMatch.participants[0]?.house === "Taurus"
-                        ? "#ef4444"
-                        : selectedMatch.participants[0]?.house === "Draco"
-                        ? "#008000"
-                        : selectedMatch.participants[0]?.house === "Aquila"
-                        ? "#3b82f6"
-                        : isDarkMode
-                        ? "#374151"
-                        : "#dbeafe", // Default color
-                    padding: "4px 8px",
-                    borderRadius: "8px",
-                    marginLeft: "8px",
-                    width: "100px",
+                    fontWeight: "bold",
+                    fontSize: "1.5rem",
+                    color: "#34D399",
                   }}
                 >
-                  {selectedMatch.participants[0]?.house}
-                </span>
-              </p>
-              <p>
-                <strong>Team B:</strong> {selectedMatch.participants[1]?.name}{" "}
-                <span
-                  style={{
-                    background:
-                      selectedMatch.participants[1]?.house === "Phoenix"
-                        ? "#FFBF00"
-                        : selectedMatch.participants[1]?.house === "Taurus"
-                        ? "#ef4444"
-                        : selectedMatch.participants[1]?.house === "Draco"
-                        ? "#008000"
-                        : selectedMatch.participants[1]?.house === "Aquila"
-                        ? "#3b82f6"
-                        : isDarkMode
-                        ? "#374151"
-                        : "#dbeafe", // Default color
-                    padding: "4px 8px",
-                    borderRadius: "8px",
-                    marginLeft: "8px",
-                    width: "100px",
-                  }}
-                >
-                  {selectedMatch.participants[1]?.house}
-                </span>
-              </p>
+                  of the mighty{" "}
+                  <span
+                    style={{
+                      color: "#FFD700",
+                      fontWeight: "bold",
+                      textTransform: "uppercase",
+                      fontSize: "1.7rem",
+                    }}
+                  >
+                    {selectedMatch.participants.find((p) => p.isWinner)?.house}
+                  </span>{" "}
+                  House! 🏆
+                </p>
+                <p style={{ fontSize: "1.3rem", fontWeight: "bold" }}>
+                  What a fantastic performance !🏅
+                </p>
+              </div>
+            ) : (
+              <div
+                style={{
+                  fontSize: "1.2rem",
+                  lineHeight: "1.6",
+                  marginBottom: "20px",
+                }}
+              >
+                <p>
+                  <strong>Start Time:</strong>{" "}
+                  {new Date(selectedMatch.startTime).toLocaleString()}
+                </p>
+                <p>
+                  <strong>Team A:</strong> {selectedMatch.participants[0]?.name}{" "}
+                  <span
+                    style={{
+                      background:
+                        selectedMatch.participants[0]?.house === "Phoenix"
+                          ? "#FFBF00"
+                          : selectedMatch.participants[0]?.house === "Taurus"
+                          ? "#ef4444"
+                          : selectedMatch.participants[0]?.house === "Draco"
+                          ? "#008000"
+                          : selectedMatch.participants[0]?.house === "Aquila"
+                          ? "#3b82f6"
+                          : isDarkMode
+                          ? "#374151"
+                          : "#dbeafe",
+                      padding: "4px 8px",
+                      borderRadius: "8px",
+                      marginLeft: "8px",
+                      width: "100px",
+                    }}
+                  >
+                    {selectedMatch.participants[0]?.house}
+                  </span>
+                </p>
+                <p>
+                  <strong>Team B:</strong> {selectedMatch.participants[1]?.name}{" "}
+                  <span
+                    style={{
+                      background:
+                        selectedMatch.participants[1]?.house === "Phoenix"
+                          ? "#FFBF00"
+                          : selectedMatch.participants[1]?.house === "Taurus"
+                          ? "#ef4444"
+                          : selectedMatch.participants[1]?.house === "Draco"
+                          ? "#008000"
+                          : selectedMatch.participants[1]?.house === "Aquila"
+                          ? "#3b82f6"
+                          : isDarkMode
+                          ? "#374151"
+                          : "#dbeafe",
+                      padding: "4px 8px",
+                      borderRadius: "8px",
+                      marginLeft: "8px",
+                      width: "100px",
+                    }}
+                  >
+                    {selectedMatch.participants[1]?.house}
+                  </span>
+                </p>
 
-              {selectedMatch.participants.some((p) => p.isWinner) ? (
-                <div
-                  style={{
-                    marginTop: "20px",
-                    padding: "12px",
-                    background: isDarkMode ? "#2563eb" : "#3b82f6",
-                    color: "#fff",
-                    borderRadius: "10px",
-                    textAlign: "center",
-                  }}
-                >
-                  🎉 {selectedMatch.participants.find((p) => p.isWinner)?.name}{" "}
-                  Wins! 🏆
-                </div>
-              ) : (
-                <p>No result yet.</p>
-              )}
-            </div>
+                {selectedMatch.participants.some((p) => p.isWinner) ? (
+                  <div
+                    style={{
+                      marginTop: "20px",
+                      padding: "12px",
+                      background: isDarkMode ? "#2563eb" : "#3b82f6",
+                      color: "#fff",
+                      borderRadius: "10px",
+                      textAlign: "center",
+                    }}
+                  >
+                    🎉{" "}
+                    {selectedMatch.participants.find((p) => p.isWinner)?.name}{" "}
+                    Wins! 🏆
+                  </div>
+                ) : (
+                  <p>No result yet.</p>
+                )}
+              </div>
+            )}
             <button
               style={{
                 marginTop: "20px",
                 padding: "12px 20px",
-                background: isDarkMode ? "#3b82f6" : "#2563eb",
+                background: isDarkMode ? "grey" : "grey",
                 color: "#fff",
                 border: "none",
                 borderRadius: "10px",
@@ -287,10 +375,10 @@ export default function Fixtures() {
               }}
               onClick={handleCloseOverlay}
             >
-              Close
+              X
             </button>
           </motion.div>
-        </motion.div>
+        </animated.div>
       )}
     </>
   );

@@ -16,6 +16,7 @@
     "react": "^19.0.0",
     "react-confetti": "^6.2.2",
     "react-dom": "^19.0.0",
+    "react-spring": "^9.7.5",
     "styled-components": "^6.1.14"
   },
   "devDependencies": {

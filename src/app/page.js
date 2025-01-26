@@ -117,7 +117,7 @@ const Page = () => {
       <div className="grid-container">
         <div className="grid-x grid-padding-x grid-margin-y">
           {cards.map((card, index) => (
-            <div className="cell medium-4" key={index}>
+            <div className="cell medium-3" key={index}>
               <Card {...card} />
             </div>
           ))}
