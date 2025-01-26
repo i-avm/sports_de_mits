@@ -76,6 +76,18 @@ export default function Fixtures() {
                 break;
             }
             break;
+          case "_admin_":
+            switch (format) {
+              case "_full_":
+                const { fullFixture } = await import(
+                  "@/data/admin/full"
+                );
+                setFixturesData(fullFixture);
+                break;
+            
+              default:
+                break;
+            }
         }
       } catch (error) {
         console.error("Error loading fixtures data:", error);
