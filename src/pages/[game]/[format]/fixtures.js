@@ -83,7 +83,7 @@ export default function Fixtures() {
       const finalMatch = fixturesData.filter(
         (fixture) => fixture.id == "F1"
       )[0];
-      debugger;
+
       if (finalMatch.participants?.some((p) => p.isWinner)) {
         setSelectedMatch(finalMatch); //
         setIsFinalsShowing(true);
@@ -125,6 +125,22 @@ export default function Fixtures() {
             matches={fixturesData}
             matchComponent={Match}
             onMatchClick={onMatchClickHandler}
+            options={{
+              style: {
+                boxHeight: 150,
+                connectorColor: "red",
+                roundHeader: {
+                  isShown: true,
+                  height: 40,
+                  marginBottom: 25,
+                  fontSize: 16,
+                  fontColor: "white",
+                  backgroundColor: "rgb(47, 54, 72)",
+                  fontFamily: '"Roboto", "Arial", "Helvetica", "sans-serif"',
+                  roundTextGenerator: undefined,
+                },
+              },
+            }}
             theme={isDarkMode ? GlootTheme : WhiteTheme}
             svgWrapper={({ children, ...props }) => (
               <SVGViewer
@@ -287,10 +303,10 @@ export default function Fixtures() {
                   marginBottom: "20px",
                 }}
               >
-                <p>
+                {/* <p>
                   <strong>Start Time:</strong>{" "}
                   {new Date(selectedMatch.startTime).toLocaleString()}
-                </p>
+                </p> */}
                 <p>
                   <strong>Team A:</strong> {selectedMatch.participants[0]?.name}{" "}
                   <span

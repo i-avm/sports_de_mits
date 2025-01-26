@@ -1,7 +1,7 @@
 import { createTheme } from '@g-loot/react-tournament-brackets';
 
 const GlootTheme = createTheme({
-  textColor: { main: '#000000', highlighted: '#F4F2FE', dark: '#707582' },
+  textColor: { main: '#000000', highlighted: '#F4F2FE', dark: '#8792ad' },
   matchBackground: { wonColor: '#2D2D59', lostColor: '#1B1D2D' },
   score: {
     background: {
