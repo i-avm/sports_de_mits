@@ -10,6 +10,8 @@ import GlootTheme from "@/utils/themes/gloot-theme";
 import WhiteTheme from "@/utils/themes/white-theme";
 import useWindowSize from "../../../utils/functions";
 import { motion } from "framer-motion";
+import Confetti from "react-confetti";
+import '../../../app/scss/fixture.scss'
 
 export default function Fixtures() {
   const router = useRouter();
@@ -19,6 +21,9 @@ export default function Fixtures() {
   const [isFixtureLoaded, setIsFixtureLoaded] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [selectedMatch, setSelectedMatch] = useState(null); // Track selected match details
+  const [width, height] = useWindowSize(); // Dynamically get window size
+  const finalWidth = Math.max(width - 50, 500);
+  const finalHeight = Math.max(height - 175, 500);
 
   useEffect(() => {
     if (!game || !format) return;
@@ -66,13 +71,6 @@ export default function Fixtures() {
     loadData();
   }, [game, format]);
 
-  const [width, height] = useWindowSize();
-  const finalWidth = Math.max(width - 50, 500);
-  const finalHeight = Math.max(height - 100, 500);
-
-  // const onPartyClickHandler = (party) => {
-  // };
-
   const onMatchClickHandler = (match) => {
     setSelectedMatch(match?.match);
   };
@@ -88,53 +86,54 @@ export default function Fixtures() {
         isDarkMode={isDarkMode}
         onToggleDarkMode={() => setIsDarkMode(!isDarkMode)}
       />
-      <header>
-        <h1>
-          {format?.charAt(0).toUpperCase() + format?.slice(1)} -{" "}
-          {game?.charAt(0).toUpperCase() + game?.slice(1)} Fixtures
+      <header class="fixture_header">
+        <h1 class="fixture_title">
+          {/* {format?.charAt(0).toUpperCase() + format?.slice(1)} -{" "}
+          {game?.charAt(0).toUpperCase() + game?.slice(1)}  */}
+          {format} - {game}&nbsp;
+          Fixtures
         </h1>
-        {isFixtureLoaded && fixturesData && fixturesData.length > 0 ? (
-          <div style={{ position: "relative" }}>
-            <SingleEliminationBracket
-              matches={fixturesData}
-              matchComponent={Match}
-              // onPartyClick={onPartyClickHandler}
-              onMatchClick={onMatchClickHandler}
-              theme={isDarkMode ? GlootTheme : WhiteTheme}
-              svgWrapper={({ children, ...props }) => (
-                <SVGViewer
-                  background={
-                    isDarkMode
-                      ? GlootTheme.svgBackground
-                      : WhiteTheme.svgBackground
-                  }
-                  SVGBackground={
-                    isDarkMode
-                      ? GlootTheme.svgBackground
-                      : WhiteTheme.svgBackground
-                  }
-                  width={finalWidth}
-                  height={finalHeight}
-                  {...props}
-                >
-                  {children}
-                </SVGViewer>
-              )}
-            />
-          </div>
-        ) : isFixtureLoaded && (!fixturesData || fixturesData.length === 0) ? (
-          <p>
-            No fixtures available for {game} - {format}.
-          </p>
-        ) : (
-          <p>Loading fixtures...</p>
-        )}
-        <br />
-        <p style={{ fontWeight: 400, color: "#b5838d" }}>© Sports de Mitsogo</p>
       </header>
 
-      {/* Match Details Overlay starts */}
+      {isFixtureLoaded && fixturesData && fixturesData.length > 0 ? (
+        <div style={{ position: "relative" }}>
+          <SingleEliminationBracket
+            matches={fixturesData}
+            matchComponent={Match}
+            onMatchClick={onMatchClickHandler}
+            theme={isDarkMode ? GlootTheme : WhiteTheme}
+            svgWrapper={({ children, ...props }) => (
+              <SVGViewer
+                background={
+                  isDarkMode
+                    ? GlootTheme.svgBackground
+                    : WhiteTheme.svgBackground
+                }
+                SVGBackground={
+                  isDarkMode
+                    ? GlootTheme.svgBackground
+                    : WhiteTheme.svgBackground
+                }
+                width={finalWidth}
+                height={finalHeight}
+                {...props}
+              >
+                {children}
+              </SVGViewer>
+            )}
+          />
+        </div>
+      ) : isFixtureLoaded && (!fixturesData || fixturesData.length === 0) ? (
+        <p>
+          No fixtures available for {game} - {format}.
+        </p>
+      ) : (
+        <p>Loading fixtures...</p>
+      )}
+      <br />
+      <p style={{ fontWeight: 400, color: "#b5838d" }}>© Sports de Mitsogo</p>
 
+      {/* Match Details Overlay */}
       {selectedMatch && (
         <motion.div
           initial={{ opacity: 0 }}
@@ -154,6 +153,18 @@ export default function Fixtures() {
           }}
           onClick={handleCloseOverlay}
         >
+          {/* Confetti Effect */}
+          {selectedMatch.participants.some((p) => p.isWinner) && (
+            <Confetti
+              width={width}
+              height={height}
+              numberOfPieces={5000}
+              initialVelocityY={{ min: 1, max: 10 }}
+              gravity={0.08}
+              recycle={false}
+            />
+          )}
+
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -169,7 +180,7 @@ export default function Fixtures() {
               width: "90%",
               color: isDarkMode ? "#e5e7eb" : "#1f2937",
             }}
-            onClick={(e) => e.stopPropagation()} // Prevent overlay close on clicking inside
+            onClick={(e) => e.stopPropagation()}
           >
             <h2
               style={{
@@ -194,80 +205,76 @@ export default function Fixtures() {
                 <strong>Start Time:</strong>{" "}
                 {new Date(selectedMatch.startTime).toLocaleString()}
               </p>
-
-              {/* Team A Details */}
               <p>
-                <strong>Team A:</strong>{" "}
-                {selectedMatch.participants[0]?.name || "N/A"}{" "}
+                <strong>Team A:</strong> {selectedMatch.participants[0]?.name}{" "}
                 <span
                   style={{
-                    background: isDarkMode ? "#374151" : "#dbeafe",
+                    background:
+                      selectedMatch.participants[0]?.house === "Phoenix"
+                        ? "#FFBF00"
+                        : selectedMatch.participants[0]?.house === "Taurus"
+                        ? "#ef4444"
+                        : selectedMatch.participants[0]?.house === "Draco"
+                        ? "#008000"
+                        : selectedMatch.participants[0]?.house === "Aquila"
+                        ? "#3b82f6"
+                        : isDarkMode
+                        ? "#374151"
+                        : "#dbeafe", // Default color
                     padding: "4px 8px",
                     borderRadius: "8px",
                     marginLeft: "8px",
-                    display: "inline-block",
+                    width: "100px",
                   }}
                 >
-                  {selectedMatch.participants[0]?.house || "Unknown"}
+                  {selectedMatch.participants[0]?.house}
                 </span>
               </p>
-
-              {/* Team B Details */}
               <p>
-                <strong>Team B:</strong>{" "}
-                {selectedMatch.participants[1]?.name || "N/A"}{" "}
+                <strong>Team B:</strong> {selectedMatch.participants[1]?.name}{" "}
                 <span
                   style={{
-                    background: isDarkMode ? "#374151" : "#dbeafe",
+                    background:
+                      selectedMatch.participants[1]?.house === "Phoenix"
+                        ? "#FFBF00"
+                        : selectedMatch.participants[1]?.house === "Taurus"
+                        ? "#ef4444"
+                        : selectedMatch.participants[1]?.house === "Draco"
+                        ? "#008000"
+                        : selectedMatch.participants[1]?.house === "Aquila"
+                        ? "#3b82f6"
+                        : isDarkMode
+                        ? "#374151"
+                        : "#dbeafe", // Default color
                     padding: "4px 8px",
                     borderRadius: "8px",
                     marginLeft: "8px",
-                    display: "inline-block",
+                    width: "100px",
                   }}
                 >
-                  {selectedMatch.participants[1]?.house || "Unknown"}
+                  {selectedMatch.participants[1]?.house}
                 </span>
               </p>
 
-              {/* Match Result */}
               {selectedMatch.participants.some((p) => p.isWinner) ? (
-                <motion.div
+                <div
                   style={{
                     marginTop: "20px",
                     padding: "12px",
                     background: isDarkMode ? "#2563eb" : "#3b82f6",
                     color: "#fff",
                     borderRadius: "10px",
-                    fontWeight: "bold",
                     textAlign: "center",
-                  }}
-                  animate={{
-                    backgroundColor: [
-                      "#2563eb",
-                      "#60a5fa",
-                      "#3b82f6",
-                      "#2563eb",
-                    ],
-                    scale: [1, 1.05, 1],
-                  }}
-                  transition={{
-                    duration: 1.5,
-                    repeat: Infinity,
                   }}
                 >
                   🎉 {selectedMatch.participants.find((p) => p.isWinner)?.name}{" "}
                   Wins! 🏆
-                </motion.div>
+                </div>
               ) : (
-                <p>
-                  <strong>Result:</strong> No result yet
-                </p>
+                <p>No result yet.</p>
               )}
             </div>
-
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
+            <button
               style={{
                 marginTop: "20px",
                 padding: "12px 20px",
@@ -281,31 +288,10 @@ export default function Fixtures() {
               onClick={handleCloseOverlay}
             >
               Close
-            </motion.button>
+            </button>
           </motion.div>
-
-          {/* Winning Animation (Confetti Effect) */}
-          {selectedMatch.participants.some((p) => p.isWinner) && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                pointerEvents: "none",
-              }}
-            >
-              {/* Add confetti or other celebration effect here */}
-            </motion.div>
-          )}
         </motion.div>
       )}
-
-      {/* Match Details Overlay ends */}
     </>
   );
 }

@@ -1,6 +1,6 @@
 import "../app/scss/floating_button.scss";
 import "font-awesome/css/font-awesome.min.css";
-
+import { useRouter } from "next/router";
 import Link from "next/link";
 
 function FloatingButton({
@@ -8,9 +8,14 @@ function FloatingButton({
   isDarkMode,
   onToggleDarkMode,
 }) {
-  const handleBackClick = () => {
-    window.history.back();
+  // Move useRouter to the top level of the component
+  const router = useRouter();
+
+  const handleBackClick = (e) => {
+    e.preventDefault(); // Prevent default anchor behavior
+    router.back();
   };
+
   return (
     <div className="adminActions">
       <input type="checkbox" name="adminToggle" className="adminToggle" />
@@ -21,9 +26,10 @@ function FloatingButton({
         <Link href="/" title="Home">
           <i className="fa fa-home"></i>
         </Link>
-        <Link href="" title="Back" onClick={handleBackClick}>
+        {/* Use a <a> tag for back navigation, since Link doesn't support onClick */}
+        <a href="#" title="Back" onClick={handleBackClick}>
           <i className="fa fa-arrow-left"></i>
-        </Link>
+        </a>
         {isDarkLightOptionEnabled && (
           <a href="#" onClick={onToggleDarkMode} title="Dark/Light Mode">
             {isDarkMode ? (
