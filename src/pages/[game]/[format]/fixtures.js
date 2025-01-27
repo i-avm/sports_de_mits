@@ -151,6 +151,7 @@ export default function Fixtures() {
               style: {
                 boxHeight: 150,
                 connectorColor: "red",
+                connectorColorHighlight:"blue",
                 roundHeader: {
                   isShown: true,
                   height: 40,

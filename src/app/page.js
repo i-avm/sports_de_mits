@@ -16,7 +16,7 @@ const cards = [
     image:
       "https://img.freepik.com/premium-photo/businessman-moving-chess-piece-chess-board-game-strategy_954932-3658.jpg",
     title: "Chess",
-    text: "Coming Soon! Stay tuned with us!",
+    text: "Stay tuned! Coming soon.",
     button: "🔒",
     redirect: "/chess",
   },
@@ -24,14 +24,14 @@ const cards = [
     image:
       "https://media.istockphoto.com/id/2121085620/photo/badminton-sport.jpg?s=612x612&w=0&k=20&c=uHy8wwxRoehJHNemHXozRTATg7CSWYGajFSYP0DPc8s=",
     title: "Badminton",
-    text: "Coming Soon! Stay tuned with us!",
+    text: "Stay tuned! Coming soon.",
     button: "🔒",
     redirect: "/badminton",
   },
   {
     image: "https://c4.wallpaperflare.com/wallpaper/956/865/266/football-player-jump-wallpaper-preview.jpg",
     title: "Football",
-    text: "Coming Soon! Stay tuned with us!",
+    text: "Stay tuned! Coming soon.",
     button: "🔒",
     redirect: "/football",
   },
@@ -39,7 +39,7 @@ const cards = [
     image:
       "https://i.pinimg.com/474x/07/f3/de/07f3de81d5546be4b96378a5b8404307.jpg",
     title: "Cricket",
-    text: "Coming Soon! Stay tuned with us!",
+    text: "Stay tuned! Coming soon.",
     button: "🔒",
     redirect: "/cricket",
   },

@@ -75,7 +75,7 @@ export const carromsMixedFixtures = [
     nextMatchId: "R2_M1",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "29-01-2024, ~1:00 PM",
+    startTime: "29-01-2025, ~1:00 PM",
     state: null,
     participants: [
       {
@@ -104,7 +104,7 @@ export const carromsMixedFixtures = [
     nextMatchId: "R2_M1",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "29-01-2024, ~1:00 PM",
+    startTime: "29-01-2025, ~1:00 PM",
     state: null,
     participants: [
       {
@@ -133,7 +133,7 @@ export const carromsMixedFixtures = [
     nextMatchId: "R2_M2",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "29-01-2024, ~1:00 PM",
+    startTime: "29-01-2025, ~1:00 PM",
     state: null,
     participants: [
       {
@@ -162,7 +162,7 @@ export const carromsMixedFixtures = [
     nextMatchId: "R2_M2",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "29-01-2024, ~1:00 PM",
+    startTime: "29-01-2025, ~1:00 PM",
     state: null,
     participants: [
       {
@@ -191,7 +191,7 @@ export const carromsMixedFixtures = [
     nextMatchId: "R2_M3",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "29-01-2024, ~1:00 PM",
+    startTime: "29-01-2025, ~1:00 PM",
     state: null,
     participants: [
       {
@@ -220,7 +220,7 @@ export const carromsMixedFixtures = [
     nextMatchId: "R2_M3",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "29-01-2024, ~1:00 PM",
+    startTime: "29-01-2025, ~1:00 PM",
     state: null,
     participants: [
       {
@@ -249,7 +249,7 @@ export const carromsMixedFixtures = [
     nextMatchId: "R2_M4",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "29-01-2024, ~1:00 PM",
+    startTime: "29-01-2025, ~1:00 PM",
     state: null,
     participants: [
       {
@@ -278,7 +278,7 @@ export const carromsMixedFixtures = [
     nextMatchId: "R2_M4",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "29-01-2024, ~1:00 PM",
+    startTime: "29-01-2025, ~1:00 PM",
     state: null,
     participants: [
       {
