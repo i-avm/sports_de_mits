@@ -67,7 +67,9 @@ $palette: #ffcdb2, #ffb4a2, #e5989b, #b5838d, #6d6875;
       color: black;
       font-size: 96px;
     }
+
     block {
+      position: relative;
       display: inline-block;
       width: 275px;
       margin: 2rem 0;
@@ -78,11 +80,46 @@ $palette: #ffcdb2, #ffb4a2, #e5989b, #b5838d, #6d6875;
       color: $black;
       background: palette(4);
       box-shadow: 0 10px 10px -10px rgba($black, 0.1);
-      transition: transform 0.4s;
+      transition: transform 0.4s, box-shadow 0.3s;
+
       &:hover {
-        animation: float 1s linear infinite alternate;
+        transform: translateY(-2px);
+        box-shadow: 0 15px 20px -10px rgba($black, 0.2);
+      }
+
+      // Circular badge for indicating today's match
+      &.today-indicator::after {
+        content: "Today";
+        position: absolute;
+        top: -12px;
+        right: -25px;
+        width: 50px;
+        height: 50px;
+        background-color: #ff4757; // Vibrant red for urgency and attention
+        color: $white;
+        font-size: 12px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        text-transform: uppercase;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba($black, 0.2);
+        animation: pop 0.8s ease-in-out infinite alternate;
       }
     }
+
+    // Minimal animation for the badge
+    @keyframes pop {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.1);
+      }
+    }
+
     p {
       font-weight: 400;
       color: palette(4);
