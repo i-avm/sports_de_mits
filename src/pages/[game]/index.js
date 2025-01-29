@@ -5,8 +5,6 @@ import "../../app/scss/game.scss";
 import FloatingButton from "@/components/FloatingButton";
 
 export default function Game() {
-  // Example logic for checking if a match is happening today for women's fixtures
-  const isWomenFixtureToday = true; // Replace this with your actual condition
 
   return (
     <div className="page-game">
@@ -17,15 +15,11 @@ export default function Game() {
           <br />
         </h1>
         <Link href="/carroms/mens/fixtures/">
-          <block className="bg-primary">View Men's Fixtures</block>
+          <block className="bg-primary today-indicator">View Men's Fixtures</block>
         </Link>
         <br />
         <Link href="/carroms/womens/fixtures/">
-          <block
-            className={`bg-primary ${
-              isWomenFixtureToday ? "today-indicator" : ""
-            }`}
-          >
+          <block className="bg-primary">
             View Women's Fixtures
           </block>
         </Link>
