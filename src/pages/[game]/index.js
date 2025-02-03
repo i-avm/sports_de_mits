@@ -27,7 +27,7 @@ export default function Game() {
         </Link>
         <br />
         <Link href="/carroms/mixed/fixtures/">
-          <block className="bg-primary today-indicator">View Mixed Fixtures</block>
+          <block className="bg-primary">View Mixed Fixtures</block>
         </Link>
         <br />
         <p>© Sports de Mitsogo</p>
