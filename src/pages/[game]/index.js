@@ -17,17 +17,17 @@ export default function Game() {
           <br />
         </h1>
         <Link href="/carroms/mens/fixtures/">
-          <block className="bg-primary">View Men's Fixtures</block>
+          <block className="bg-primary today-indicator">View Men's Fixtures</block>
         </Link>
         <br />
         <Link href="/carroms/womens/fixtures/">
-          <block className="bg-primary today-indicator">
+          <block className="bg-primary">
             View Women's Fixtures
           </block>
         </Link>
         <br />
         <Link href="/carroms/mixed/fixtures/">
-          <block className="bg-primary">View Mixed Fixtures</block>
+          <block className="bg-primary today-indicator">View Mixed Fixtures</block>
         </Link>
         <br />
         <p>© Sports de Mitsogo</p>
