@@ -7,7 +7,6 @@ import FloatingButton from "@/components/FloatingButton";
 // const TODAY_INDICATOR = "today-indicator"
 
 export default function Game() {
-
   return (
     <div className="page-game">
       <FloatingButton isDarkLightOptionEnabled={false} />
@@ -17,17 +16,21 @@ export default function Game() {
           <br />
         </h1>
         <Link href="/carroms/mens/fixtures/">
-          <block className="bg-primary">View Men's Fixtures</block>
+          <block className="bg-primary today-indicator">
+            View Men's Fixtures
+          </block>
         </Link>
         <br />
         <Link href="/carroms/womens/fixtures/">
-          <block className="bg-primary">
+          <block className="bg-primary today-indicator">
             View Women's Fixtures
           </block>
         </Link>
         <br />
         <Link href="/carroms/mixed/fixtures/">
-          <block className="bg-primary">View Mixed Fixtures</block>
+          <block className="bg-primary today-indicator">
+            View Mixed Fixtures
+          </block>
         </Link>
         <br />
         <p>© Sports de Mitsogo</p>
