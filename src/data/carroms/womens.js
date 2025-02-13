@@ -5,7 +5,7 @@ export const carromsWomensFixtures = [
     nextMatchId: null,
     nextLooserMatchId: null,
     tournamentRoundText: "4",
-    startTime: "--",
+    startTime: "13 Feb 2025",
     state: null,
     participants: [
       {
@@ -34,7 +34,7 @@ export const carromsWomensFixtures = [
     nextMatchId: null,
     nextLooserMatchId: null,
     tournamentRoundText: "4",
-    startTime: "--",
+    startTime: "13 Feb 2025",
     state: null,
     participants: [
       {
