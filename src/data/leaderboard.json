@@ -1,0 +1,48 @@
+[
+  {
+    "house": "Aquila",
+    "medals": {
+      "Gold": [],
+      "Silver": [
+        { "game": "Mens Carroms", "points": 6 },
+        { "game": "Mixed Carroms", "points": 6 }
+      ],
+      "Bronze": [{ "game": "Mens Carroms", "points": 4 }],
+      "Fourth": []
+    }
+  },
+  {
+    "house": "Draco",
+    "medals": {
+      "Gold": [],
+      "Silver": [{ "game": "Womens Carroms", "points": 6 }],
+      "Bronze": [],
+      "Fourth": [
+        { "game": "Mens Carroms", "points": 2 },
+        { "game": "Womens Carroms", "points": 2 }
+      ]
+    }
+  },
+  {
+    "house": "Phoenix",
+    "medals": {
+      "Gold": [
+        { "game": "Mens Carroms", "points": 10 },
+        { "game": "Womens Carroms", "points": 10 },
+        { "game": "Mixed Carroms", "points": 10 }
+      ],
+      "Silver": [],
+      "Bronze": [{ "game": "Womens Carroms", "points": 4 }],
+      "Fourth": []
+    }
+  },
+  {
+    "house": "Taurus",
+    "medals": {
+      "Gold": [],
+      "Silver": [],
+      "Bronze": [],
+      "Fourth": []
+    }
+  }
+]

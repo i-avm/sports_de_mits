@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import "../app/scss/home.scss";
 import Link from "next/link";
 
@@ -29,7 +30,8 @@ const cards = [
     redirect: "/badminton",
   },
   {
-    image: "https://c4.wallpaperflare.com/wallpaper/956/865/266/football-player-jump-wallpaper-preview.jpg",
+    image:
+      "https://c4.wallpaperflare.com/wallpaper/956/865/266/football-player-jump-wallpaper-preview.jpg",
     title: "Football",
     text: "Stay tuned! Coming soon.",
     button: "🔒",
@@ -89,27 +91,44 @@ const Card = ({ image, title, text, button, redirect }) => (
 //   );
 // };
 
-const Header = () => (
-  <header className="home-header">
-    <div className="grid-container">
-      <div className="grid-x align-justify align-middle">
-        <div className="cell">
-          <h1 className="page-title text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-teal-500 via-cyan-400 to-indigo-500 drop-shadow-lg">
-            Sports de Mitsogo
-          </h1>
-        </div>
-        <div className="cell">
-          <img src="/club-logo.jpeg" alt="SDM" width={80} height={80}/>
-          {/* <DarkMode theme={theme} setTheme={setTheme} /> */}
+export const Header = () => {
+  const router = useRouter();
+  const onClickLeaderboard = () => {
+    router.push("/leaderboard");
+  };
+  const onClickHome = () => {
+    router.push("/");
+  };
+  return (
+    <header className="home-header">
+      <div className="grid-container">
+        <div className="grid-x align-justify align-middle">
+          <div
+            className="cell"
+            style={{ cursor: "pointer" }}
+            onClick={onClickHome}
+          >
+            <img src="/club-logo.jpeg" alt="SDM" width={80} height={80} />
+          </div>
+          <div
+            className="cell"
+            style={{ cursor: "pointer" }}
+            onClick={onClickLeaderboard}
+          >
+            <img
+              src="https://png.pngtree.com/png-clipart/20240429/ourmid/pngtree-leaderboard-icon-png-image_12339126.png"
+              alt="Rankings"
+              width={60}
+              height={60}
+            />
+          </div>
         </div>
       </div>
-    </div>
-  </header>
-);
+    </header>
+  );
+};
 
 const Page = () => {
-  // const [theme, setTheme] = useState(localStorage.getItem('theme') || 'theme-light');
-
   return (
     <>
       <Header />
