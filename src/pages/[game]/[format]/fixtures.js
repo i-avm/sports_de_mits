@@ -76,15 +76,41 @@ export default function Fixtures() {
                 break;
             }
             break;
+          case "badminton":
+            switch (format) {
+              case "mens":
+                const { badmintonMensFixtures } = await import(
+                  "@/data/badminton/mens"
+                );
+                setFixturesData(badmintonMensFixtures);
+                break;
+
+              case "womens":
+                const { badmintonWomensFixtures } = await import(
+                  "@/data/badminton/womens"
+                );
+                setFixturesData(badmintonWomensFixtures);
+                break;
+
+              case "mixed":
+                const { badmintonMixedFixtures } = await import(
+                  "@/data/badminton/mixed"
+                );
+                setFixturesData(badmintonMixedFixtures);
+                break;
+
+              default:
+                setFixturesData([]);
+                break;
+            }
+            break;
           case "_admin_":
             switch (format) {
               case "_full_":
-                const { fullFixture } = await import(
-                  "@/data/admin/full"
-                );
+                const { fullFixture } = await import("@/data/admin/full");
                 setFixturesData(fullFixture);
                 break;
-            
+
               default:
                 break;
             }
@@ -151,7 +177,7 @@ export default function Fixtures() {
               style: {
                 boxHeight: 150,
                 connectorColor: "red",
-                connectorColorHighlight:"blue",
+                connectorColorHighlight: "blue",
                 roundHeader: {
                   isShown: true,
                   height: 40,

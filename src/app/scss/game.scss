@@ -88,8 +88,8 @@ $palette: #ffcdb2, #ffb4a2, #e5989b, #b5838d, #6d6875;
       }
 
       // Circular badge for indicating today's match
-      &.today-indicator::after {
-        content: "Finals!";
+      &.icon-indicator::after {
+        // content: "";
         position: absolute;
         top: -12px;
         right: -25px;
@@ -107,6 +107,10 @@ $palette: #ffcdb2, #ffb4a2, #e5989b, #b5838d, #6d6875;
         border-radius: 50%;
         box-shadow: 0 4px 8px rgba($black, 0.2);
         animation: pop 0.8s ease-in-out infinite alternate;
+      }
+
+      &.soon_ind::after {
+        content: "Soon";
       }
     }
 

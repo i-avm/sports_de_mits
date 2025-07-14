@@ -15,19 +15,19 @@ const cards = [
   },
   {
     image:
-      "https://img.freepik.com/premium-photo/businessman-moving-chess-piece-chess-board-game-strategy_954932-3658.jpg",
-    title: "Chess",
+      "https://t3.ftcdn.net/jpg/03/10/62/12/360_F_310621281_foEqKBGtGlNWFQRePgdF5BpLOFyTsnzO.jpg",
+    title: "Badminton",
     text: "Stay tuned! Coming soon.",
-    button: "🔒",
-    redirect: "/chess",
+    button: "View",
+    redirect: "/badminton",
   },
   {
     image:
-      "https://media.istockphoto.com/id/2121085620/photo/badminton-sport.jpg?s=612x612&w=0&k=20&c=uHy8wwxRoehJHNemHXozRTATg7CSWYGajFSYP0DPc8s=",
-    title: "Badminton",
+      "https://i.pinimg.com/474x/07/f3/de/07f3de81d5546be4b96378a5b8404307.jpg",
+    title: "Cricket",
     text: "Stay tuned! Coming soon.",
     button: "🔒",
-    redirect: "/badminton",
+    redirect: "/cricket",
   },
   {
     image:
@@ -39,11 +39,11 @@ const cards = [
   },
   {
     image:
-      "https://i.pinimg.com/474x/07/f3/de/07f3de81d5546be4b96378a5b8404307.jpg",
-    title: "Cricket",
+      "https://img.freepik.com/premium-photo/businessman-moving-chess-piece-chess-board-game-strategy_954932-3658.jpg",
+    title: "Chess",
     text: "Stay tuned! Coming soon.",
     button: "🔒",
-    redirect: "/cricket",
+    redirect: "/chess",
   },
   {
     image: "https://www.uxade.com/assets/images/z-andmore-506x300.png",

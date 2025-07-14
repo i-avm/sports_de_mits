@@ -3,32 +3,40 @@
 import Link from "next/link";
 import "../../app/scss/game.scss";
 import FloatingButton from "@/components/FloatingButton";
+import { useRouter } from "next/router";
 
-// const TODAY_INDICATOR = "today-indicator"
+// const ICON_INDICATOR = "icon-indicator"
 
 export default function Game() {
+  const router = useRouter();
+  const { game, format } = router.query;
+
   return (
     <div className="page-game">
       <FloatingButton isDarkLightOptionEnabled={false} />
       <header style={{ display: "grid" }}>
         <h1>
-          CARROMS
+          {game === "carroms"
+            ? "CARROMS"
+            : game === "badminton"
+            ? "BADMINTON"
+            : ""}
           <br />
         </h1>
-        <Link href="/carroms/mens/fixtures/">
-          <block className="bg-primary today-indicator">
+        <Link href={`/${game}/mens/fixtures/`}>
+          <block className="bg-primary icon-indicator soon_ind">
             View Men's Fixtures
           </block>
         </Link>
         <br />
-        <Link href="/carroms/womens/fixtures/">
-          <block className="bg-primary today-indicator">
+        <Link href={`/${game}/womens/fixtures/`}>
+          <block className="bg-primary icon-indicator soon_ind">
             View Women's Fixtures
           </block>
         </Link>
         <br />
-        <Link href="/carroms/mixed/fixtures/">
-          <block className="bg-primary today-indicator">
+        <Link href={`/${game}/mixed/fixtures/`}>
+          <block className="bg-primary icon-indicator soon_ind">
             View Mixed Fixtures
           </block>
         </Link>
