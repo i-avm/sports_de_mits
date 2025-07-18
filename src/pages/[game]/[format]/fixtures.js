@@ -448,3 +448,28 @@ export default function Fixtures() {
     </>
   );
 }
+
+// const Match = ({ match, onMatchClick }) => {
+//   // Example condition: highlight winner
+//   const isWinner =
+//     match.winner && match.winner.id === match.participants[0]?.id;
+
+//   const backgroundColor = isWinner ? "#d4edda" : "#f8d7da"; // green for winner, red for others
+//   return (
+//     <div
+//       onClick={() => onMatchClick(match)}
+//       style={{
+//         backgroundColor,
+//         border: "1px solid #ccc",
+//         borderRadius: "8px",
+//         padding: "10px",
+//         margin: "5px",
+//         cursor: "pointer",
+//       }}
+//     >
+//       <div>{match.participants[0]?.name || "TBD"}</div>
+//       <div>vs</div>
+//       <div>{match.participants[1]?.name || "TBD"}</div>
+//     </div>
+//   );
+// };

@@ -75,7 +75,7 @@ export const badmintonMensFixtures = [
     nextMatchId: "R2_M1",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "2024-01-27",
+    startTime: "2024-07-19",
     state: null,
     participants: [
       {
@@ -84,7 +84,7 @@ export const badmintonMensFixtures = [
         isWinner: false,
         status: null,
         house: "Aquila",
-        name: "AQUILA_1",
+        name: "Abin Tony T & Pattabhirami Reddy",
         picture: null,
       },
       {
@@ -93,7 +93,7 @@ export const badmintonMensFixtures = [
         isWinner: false,
         status: null,
         house: "Draco",
-        name: "DRACO_1",
+        name: "Sidharth Govardhan E V-Richardson D",
         picture: null,
       },
     ],
@@ -104,7 +104,7 @@ export const badmintonMensFixtures = [
     nextMatchId: "R2_M1",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "2024-01-27",
+    startTime: "2024-07-19",
     state: null,
     participants: [
       {
@@ -112,8 +112,8 @@ export const badmintonMensFixtures = [
         resultText: null,
         isWinner: false,
         status: null,
-        house: "Taurus",
-        name: "TAURUS_1",
+        house: "Phoenix",
+        name: "Jithin Renny Mathew - Aravindan Nateshan",
         picture: null,
       },
       {
@@ -121,8 +121,8 @@ export const badmintonMensFixtures = [
         resultText: null,
         isWinner: false,
         status: null,
-        house: "Phoenix",
-        name: "PHOENIX_1",
+        house: "Taurus",
+        name: "Alfin Antony - Simon N Pallan",
         picture: null,
       },
     ],
@@ -133,7 +133,7 @@ export const badmintonMensFixtures = [
     nextMatchId: "R2_M2",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "2024-01-27",
+    startTime: "2024-07-19",
     state: null,
     participants: [
       {
@@ -141,8 +141,8 @@ export const badmintonMensFixtures = [
         resultText: null,
         isWinner: false,
         status: null,
-        house: "Phoenix",
-        name: "PHOENIX_3",
+        house: "Draco",
+        name: "Balukrishnan S - Gopal K M",
         picture: null,
       },
       {
@@ -150,8 +150,8 @@ export const badmintonMensFixtures = [
         resultText: null,
         isWinner: false,
         status: null,
-        house: "Aquila",
-        name: "AQUILA_3",
+        house: "Phoenix",
+        name: "Harsh Anurag - Logavignesh Ellappa",
         picture: null,
       },
     ],
@@ -162,7 +162,7 @@ export const badmintonMensFixtures = [
     nextMatchId: "R2_M2",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "2024-01-27",
+    startTime: "2024-07-19",
     state: null,
     participants: [
       {
@@ -171,7 +171,7 @@ export const badmintonMensFixtures = [
         isWinner: false,
         status: null,
         house: "Taurus",
-        name: "TAURUS_3",
+        name: "Ajayan C - Aswin K",
         picture: null,
       },
       {
@@ -179,8 +179,8 @@ export const badmintonMensFixtures = [
         resultText: null,
         isWinner: false,
         status: null,
-        house: "Draco",
-        name: "DRACO_3",
+        house: "Aquila",
+        name: "Kattiri Kishore & Rahul Kommuri",
         picture: null,
       },
     ],
@@ -191,7 +191,7 @@ export const badmintonMensFixtures = [
     nextMatchId: "R2_M3",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "2024-01-27",
+    startTime: "2024-07-19",
     state: null,
     participants: [
       {
@@ -199,8 +199,8 @@ export const badmintonMensFixtures = [
         resultText: null,
         isWinner: false,
         status: null,
-        house: "Taurus",
-        name: "TAURUS_2",
+        house: "Phoenix",
+        name: "Vipin Govind - Arun Raj",
         picture: null,
       },
       {
@@ -208,8 +208,8 @@ export const badmintonMensFixtures = [
         resultText: null,
         isWinner: false,
         status: null,
-        house: "Phoenix",
-        name: "PHOENIX_2",
+        house: "Taurus",
+        name: "Mohammed Roshan Sharafudeen - Terin Thomas",
         picture: null,
       },
     ],
@@ -220,7 +220,7 @@ export const badmintonMensFixtures = [
     nextMatchId: "R2_M3",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "2024-01-27",
+    startTime: "2024-07-19",
     state: null,
     participants: [
       {
@@ -229,7 +229,7 @@ export const badmintonMensFixtures = [
         isWinner: false,
         status: null,
         house: "Aquila",
-        name: "AQUILA_2",
+        name: "Akhil V & Aaghosh T K",
         picture: null,
       },
       {
@@ -238,7 +238,7 @@ export const badmintonMensFixtures = [
         isWinner: false,
         status: null,
         house: "Draco",
-        name: "DRACO_2",
+        name: "Jeeva Murugan Anand-Mahadev Panickar",
         picture: null,
       },
     ],
@@ -249,7 +249,7 @@ export const badmintonMensFixtures = [
     nextMatchId: "R2_M4",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "2024-01-27",
+    startTime: "2024-07-19",
     state: null,
     participants: [
       {
@@ -258,7 +258,7 @@ export const badmintonMensFixtures = [
         isWinner: false,
         status: null,
         house: "Taurus",
-        name: "TAURUS_4",
+        name: "Rahul P P - Sree Sai Hemanth Seeni",
         picture: null,
       },
       {
@@ -267,7 +267,7 @@ export const badmintonMensFixtures = [
         isWinner: false,
         status: null,
         house: "Aquila",
-        name: "AQUILA_4",
+        name: "Balaji Parthasarathy & Shri Shabarise G",
         picture: null,
       },
     ],
@@ -278,7 +278,7 @@ export const badmintonMensFixtures = [
     nextMatchId: "R2_M4",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "2024-01-27",
+    startTime: "2024-07-19",
     state: null,
     participants: [
       {
@@ -287,7 +287,7 @@ export const badmintonMensFixtures = [
         isWinner: false,
         status: null,
         house: "Draco",
-        name: "DRACO_4",
+        name: "Gurudhakshan S -Ajaykrishnan S",
         picture: null,
       },
       {
@@ -296,7 +296,7 @@ export const badmintonMensFixtures = [
         isWinner: false,
         status: null,
         house: "Phoenix",
-        name: "PHOENIX_4",
+        name: "Vishnu Prasad H - Srinath Arun",
         picture: null,
       },
     ],

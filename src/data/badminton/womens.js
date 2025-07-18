@@ -75,7 +75,7 @@ export const badmintonWomensFixtures = [
     nextMatchId: "R2_M1",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "2024-01-27",
+    startTime: "2024-07-19",
     state: null,
     participants: [
       {
@@ -84,7 +84,7 @@ export const badmintonWomensFixtures = [
         isWinner: false,
         status: null,
         house: "Aquila",
-        name: "AQUILA_1",
+        name: "Dimpu Vanasree Marri & Rose Elisabath Rajan",
         picture: null,
       },
       {
@@ -92,8 +92,8 @@ export const badmintonWomensFixtures = [
         resultText: null,
         isWinner: false,
         status: null,
-        house: "Draco",
-        name: "DRACO_1",
+        house: "Taurus",
+        name: "Anagha S - Shahana S",
         picture: null,
       },
     ],
@@ -104,7 +104,7 @@ export const badmintonWomensFixtures = [
     nextMatchId: "R2_M1",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "2024-01-27",
+    startTime: "2024-07-19",
     state: null,
     participants: [
       {
@@ -112,8 +112,8 @@ export const badmintonWomensFixtures = [
         resultText: null,
         isWinner: false,
         status: null,
-        house: "Taurus",
-        name: "TAURUS_1",
+        house: "Draco",
+        name: "Aishwarya Roy - Bhuvaneshwary Mathpati",
         picture: null,
       },
       {
@@ -122,7 +122,7 @@ export const badmintonWomensFixtures = [
         isWinner: false,
         status: null,
         house: "Phoenix",
-        name: "PHOENIX_1",
+        name: "Dhiya Mary - Gayathri S",
         picture: null,
       },
     ],
@@ -133,7 +133,7 @@ export const badmintonWomensFixtures = [
     nextMatchId: "R2_M2",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "2024-01-27",
+    startTime: "2024-07-19",
     state: null,
     participants: [
       {
@@ -141,8 +141,8 @@ export const badmintonWomensFixtures = [
         resultText: null,
         isWinner: false,
         status: null,
-        house: "Phoenix",
-        name: "PHOENIX_3",
+        house: "Taurus",
+        name: "Nandhini Sakthivel - Angelin James",
         picture: null,
       },
       {
@@ -150,8 +150,8 @@ export const badmintonWomensFixtures = [
         resultText: null,
         isWinner: false,
         status: null,
-        house: "Aquila",
-        name: "AQUILA_3",
+        house: "Draco",
+        name: "Aishwarya Jathish - Priyadharshini S",
         picture: null,
       },
     ],
@@ -162,7 +162,7 @@ export const badmintonWomensFixtures = [
     nextMatchId: "R2_M2",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "2024-01-27",
+    startTime: "2024-07-19",
     state: null,
     participants: [
       {
@@ -170,8 +170,8 @@ export const badmintonWomensFixtures = [
         resultText: null,
         isWinner: false,
         status: null,
-        house: "Taurus",
-        name: "TAURUS_3",
+        house: "Phoenix",
+        name: "Vidhya Vijayakumar - Aishwarya K",
         picture: null,
       },
       {
@@ -179,8 +179,8 @@ export const badmintonWomensFixtures = [
         resultText: null,
         isWinner: false,
         status: null,
-        house: "Draco",
-        name: "DRACO_3",
+        house: "Aquila",
+        name: "Lavanya Vithiananthan & Divya Jothi K",
         picture: null,
       },
     ],
@@ -191,7 +191,7 @@ export const badmintonWomensFixtures = [
     nextMatchId: "R2_M3",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "2024-01-27",
+    startTime: "2024-07-19",
     state: null,
     participants: [
       {
@@ -199,8 +199,8 @@ export const badmintonWomensFixtures = [
         resultText: null,
         isWinner: false,
         status: null,
-        house: "Taurus",
-        name: "TAURUS_2",
+        house: "Draco",
+        name: "Mirudhulaa S - Neetha M S",
         picture: null,
       },
       {
@@ -209,7 +209,7 @@ export const badmintonWomensFixtures = [
         isWinner: false,
         status: null,
         house: "Phoenix",
-        name: "PHOENIX_2",
+        name: "Aneeta Thomson - Lakshmi Firoz",
         picture: null,
       },
     ],
@@ -220,7 +220,7 @@ export const badmintonWomensFixtures = [
     nextMatchId: "R2_M3",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "2024-01-27",
+    startTime: "2024-07-19",
     state: null,
     participants: [
       {
@@ -229,7 +229,7 @@ export const badmintonWomensFixtures = [
         isWinner: false,
         status: null,
         house: "Aquila",
-        name: "AQUILA_2",
+        name: "Deepika Sankar & Rakshaya Kamini Vasutha",
         picture: null,
       },
       {
@@ -237,8 +237,8 @@ export const badmintonWomensFixtures = [
         resultText: null,
         isWinner: false,
         status: null,
-        house: "Draco",
-        name: "DRACO_2",
+        house: "Taurus",
+        name: "Riya Ann Varghese - Felin Elizabeth Binoy",
         picture: null,
       },
     ],
@@ -249,7 +249,7 @@ export const badmintonWomensFixtures = [
     nextMatchId: "R2_M4",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "2024-01-27",
+    startTime: "2024-07-19",
     state: null,
     participants: [
       {
@@ -257,8 +257,8 @@ export const badmintonWomensFixtures = [
         resultText: null,
         isWinner: false,
         status: null,
-        house: "Taurus",
-        name: "TAURUS_4",
+        house: "Phoenix",
+        name: "Anju P - Shradha Radhakrishnan",
         picture: null,
       },
       {
@@ -267,7 +267,7 @@ export const badmintonWomensFixtures = [
         isWinner: false,
         status: null,
         house: "Aquila",
-        name: "AQUILA_4",
+        name: "--",
         picture: null,
       },
     ],
@@ -278,7 +278,7 @@ export const badmintonWomensFixtures = [
     nextMatchId: "R2_M4",
     nextLooserMatchId: null,
     tournamentRoundText: "1",
-    startTime: "2024-01-27",
+    startTime: "2024-07-19",
     state: null,
     participants: [
       {
@@ -286,8 +286,8 @@ export const badmintonWomensFixtures = [
         resultText: null,
         isWinner: false,
         status: null,
-        house: "Draco",
-        name: "DRACO_4",
+        house: "Taurus",
+        name: "Sweatha Kannan - Divya Govindaswamy",
         picture: null,
       },
       {
@@ -295,8 +295,8 @@ export const badmintonWomensFixtures = [
         resultText: null,
         isWinner: false,
         status: null,
-        house: "Phoenix",
-        name: "PHOENIX_4",
+        house: "Draco",
+        name: "Rifaya Sherin K - Ashwini Biradar",
         picture: null,
       },
     ],
