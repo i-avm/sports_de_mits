@@ -110,16 +110,16 @@ export default function Leaderboard() {
                 return (
                   <tr key={house.house}>
                     <td className="number">
-                      {index === 0 ? (
+                      {/* {index === 0 ? (
                         <img
                           style={{ paddingLeft: "0px", marginLeft: "-10px" }}
                           className="gold-medal"
                           src="https://github.com/malunaridev/Challenges-iCodeThis/blob/master/4-leaderboard/assets/gold-medal.png?raw=true"
                           alt="gold medal"
                         />
-                      ) : (
-                        index + 1
-                      )}
+                      ) : ( */}
+                      {index + 1}
+                      {/* )} */}
                     </td>
                     <td className="name">{house.house}</td>
                     <td
