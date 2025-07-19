@@ -37,7 +37,26 @@ export const badmintonWomensFixtures = [
     tournamentRoundText: "2",
     startTime: "--",
     state: null,
-    participants: [],
+    participants: [
+      {
+        id: "1",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Aquila",
+        name: "Dimpu Vanasree Marri & Rose Elisabath Rajan",
+        picture: null,
+      },
+      {
+        id: "3",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Draco",
+        name: "Aishwarya Roy - Bhuvaneshwary Mathpati",
+        picture: null,
+      },
+    ],
   },
   {
     id: "R2_M2",
@@ -47,7 +66,17 @@ export const badmintonWomensFixtures = [
     tournamentRoundText: "2",
     startTime: "--",
     state: null,
-    participants: [],
+    participants: [
+      {
+        id: "7",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Phoenix",
+        name: "Vidhya Vijayakumar - Aishwarya K",
+        picture: null,
+      },
+    ],
   },
   {
     id: "R2_M3",
@@ -57,7 +86,26 @@ export const badmintonWomensFixtures = [
     tournamentRoundText: "2",
     startTime: "--",
     state: null,
-    participants: [],
+    participants: [
+      {
+        id: "9",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Draco",
+        name: "Mirudhulaa S - Neetha M S",
+        picture: null,
+      },
+      {
+        id: "11",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Aquila",
+        name: "Deepika Sankar & Rakshaya Kamini Vasutha",
+        picture: null,
+      },
+    ],
   },
   {
     id: "R2_M4",
@@ -67,7 +115,26 @@ export const badmintonWomensFixtures = [
     tournamentRoundText: "2",
     startTime: "--",
     state: null,
-    participants: [],
+    participants: [
+      {
+        id: "13",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Phoenix",
+        name: "Anju P - Shradha Radhakrishnan",
+        picture: null,
+      },
+      {
+        id: "16",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Draco",
+        name: "Rifaya Sherin K - Ashwini Biradar",
+        picture: null,
+      },
+    ],
   },
   {
     id: "R1_M1",
@@ -80,8 +147,8 @@ export const badmintonWomensFixtures = [
     participants: [
       {
         id: "1",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Aquila",
         name: "Dimpu Vanasree Marri & Rose Elisabath Rajan",
@@ -89,7 +156,7 @@ export const badmintonWomensFixtures = [
       },
       {
         id: "2",
-        resultText: null,
+        resultText: "0",
         isWinner: false,
         status: null,
         house: "Taurus",
@@ -109,8 +176,8 @@ export const badmintonWomensFixtures = [
     participants: [
       {
         id: "3",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Draco",
         name: "Aishwarya Roy - Bhuvaneshwary Mathpati",
@@ -118,7 +185,7 @@ export const badmintonWomensFixtures = [
       },
       {
         id: "4",
-        resultText: null,
+        resultText: "0",
         isWinner: false,
         status: null,
         house: "Phoenix",
@@ -167,8 +234,8 @@ export const badmintonWomensFixtures = [
     participants: [
       {
         id: "7",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Phoenix",
         name: "Vidhya Vijayakumar - Aishwarya K",
@@ -176,7 +243,7 @@ export const badmintonWomensFixtures = [
       },
       {
         id: "8",
-        resultText: null,
+        resultText: "0",
         isWinner: false,
         status: null,
         house: "Aquila",
@@ -196,8 +263,8 @@ export const badmintonWomensFixtures = [
     participants: [
       {
         id: "9",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Draco",
         name: "Mirudhulaa S - Neetha M S",
@@ -205,7 +272,7 @@ export const badmintonWomensFixtures = [
       },
       {
         id: "10",
-        resultText: null,
+        resultText: "0",
         isWinner: false,
         status: null,
         house: "Phoenix",
@@ -225,8 +292,8 @@ export const badmintonWomensFixtures = [
     participants: [
       {
         id: "11",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Aquila",
         name: "Deepika Sankar & Rakshaya Kamini Vasutha",
@@ -234,7 +301,7 @@ export const badmintonWomensFixtures = [
       },
       {
         id: "12",
-        resultText: null,
+        resultText: "1",
         isWinner: false,
         status: null,
         house: "Taurus",
@@ -254,8 +321,8 @@ export const badmintonWomensFixtures = [
     participants: [
       {
         id: "13",
-        resultText: null,
-        isWinner: false,
+        resultText: "WO",
+        isWinner: true,
         status: null,
         house: "Phoenix",
         name: "Anju P - Shradha Radhakrishnan",
@@ -263,7 +330,7 @@ export const badmintonWomensFixtures = [
       },
       {
         id: "14",
-        resultText: null,
+        resultText: "--",
         isWinner: false,
         status: null,
         house: "Aquila",
@@ -283,7 +350,7 @@ export const badmintonWomensFixtures = [
     participants: [
       {
         id: "15",
-        resultText: null,
+        resultText: "0",
         isWinner: false,
         status: null,
         house: "Taurus",
@@ -292,8 +359,8 @@ export const badmintonWomensFixtures = [
       },
       {
         id: "16",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Draco",
         name: "Rifaya Sherin K - Ashwini Biradar",
