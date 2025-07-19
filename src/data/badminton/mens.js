@@ -47,7 +47,17 @@ export const badmintonMensFixtures = [
     tournamentRoundText: "2",
     startTime: "--",
     state: null,
-    participants: [],
+    participants: [
+      {
+        id: "5",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Draco",
+        name: "Balukrishnan S - Gopal K M",
+        picture: null,
+      },
+    ],
   },
   {
     id: "R2_M3",
@@ -138,8 +148,8 @@ export const badmintonMensFixtures = [
     participants: [
       {
         id: "5",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Draco",
         name: "Balukrishnan S - Gopal K M",
@@ -147,7 +157,7 @@ export const badmintonMensFixtures = [
       },
       {
         id: "6",
-        resultText: null,
+        resultText: "0",
         isWinner: false,
         status: null,
         house: "Phoenix",
