@@ -17,7 +17,26 @@ export const badmintonMixedFixtures = [
     tournamentRoundText: "3",
     startTime: "--",
     state: null,
-    participants: [],
+    participants: [
+      {
+        id: "1",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Aquila",
+        name: "Dimpu Vanasree Marri & Abin Tony T",
+        picture: null,
+      },
+      {
+        id: "5",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Phoenix",
+        name: "Anju P - Vipin Govind",
+        picture: null,
+      },
+    ],
   },
   {
     id: "SF_M2",
@@ -27,7 +46,26 @@ export const badmintonMixedFixtures = [
     tournamentRoundText: "3",
     startTime: "--",
     state: null,
-    participants: [],
+    participants: [
+      {
+        id: "9",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Draco",
+        name: "Gopal K M - Mirudhulaa S",
+        picture: null,
+      },
+      {
+        id: "13",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Taurus",
+        name: "Rahul P P - Nandhini Sakthivel",
+        picture: null,
+      },
+    ],
   },
   {
     id: "R2_M1",
@@ -40,8 +78,8 @@ export const badmintonMixedFixtures = [
     participants: [
       {
         id: "1",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Aquila",
         name: "Dimpu Vanasree Marri & Abin Tony T",
@@ -49,7 +87,7 @@ export const badmintonMixedFixtures = [
       },
       {
         id: "4",
-        resultText: null,
+        resultText: "0",
         isWinner: false,
         status: null,
         house: "Taurus",
@@ -69,8 +107,8 @@ export const badmintonMixedFixtures = [
     participants: [
       {
         id: "5",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Phoenix",
         name: "Anju P - Vipin Govind",
@@ -78,7 +116,7 @@ export const badmintonMixedFixtures = [
       },
       {
         id: "8",
-        resultText: null,
+        resultText: "0",
         isWinner: false,
         status: null,
         house: "Aquila",
@@ -98,8 +136,8 @@ export const badmintonMixedFixtures = [
     participants: [
       {
         id: "9",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Draco",
         name: "Gopal K M - Mirudhulaa S",
@@ -107,7 +145,7 @@ export const badmintonMixedFixtures = [
       },
       {
         id: "11",
-        resultText: null,
+        resultText: "1",
         isWinner: false,
         status: null,
         house: "Aquila",
@@ -127,8 +165,8 @@ export const badmintonMixedFixtures = [
     participants: [
       {
         id: "13",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Taurus",
         name: "Rahul P P - Nandhini Sakthivel",
@@ -136,7 +174,7 @@ export const badmintonMixedFixtures = [
       },
       {
         id: "15",
-        resultText: null,
+        resultText: "0",
         isWinner: false,
         status: null,
         house: "Phoenix",

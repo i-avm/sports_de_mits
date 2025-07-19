@@ -17,7 +17,26 @@ export const badmintonWomensFixtures = [
     tournamentRoundText: "3",
     startTime: "--",
     state: null,
-    participants: [],
+    participants: [
+      {
+        id: "5",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Taurus",
+        name: "Nandhini Sakthivel - Angelin James",
+        picture: null,
+      },
+      {
+        id: "1",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Aquila",
+        name: "Dimpu Vanasree Marri & Rose Elisabath Rajan",
+        picture: null,
+      },
+    ],
   },
   {
     id: "SF_M2",
@@ -59,8 +78,8 @@ export const badmintonWomensFixtures = [
     participants: [
       {
         id: "1",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Aquila",
         name: "Dimpu Vanasree Marri & Rose Elisabath Rajan",
@@ -68,7 +87,7 @@ export const badmintonWomensFixtures = [
       },
       {
         id: "3",
-        resultText: null,
+        resultText: "0",
         isWinner: false,
         status: null,
         house: "Draco",
@@ -88,7 +107,7 @@ export const badmintonWomensFixtures = [
     participants: [
       {
         id: "7",
-        resultText: null,
+        resultText: "0",
         isWinner: false,
         status: null,
         house: "Phoenix",
@@ -97,8 +116,8 @@ export const badmintonWomensFixtures = [
       },
       {
         id: "5",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Taurus",
         name: "Nandhini Sakthivel - Angelin James",
