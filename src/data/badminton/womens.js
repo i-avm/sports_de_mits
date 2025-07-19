@@ -27,7 +27,26 @@ export const badmintonWomensFixtures = [
     tournamentRoundText: "3",
     startTime: "--",
     state: null,
-    participants: [],
+    participants: [
+      {
+        id: "13",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Phoenix",
+        name: "Anju P - Shradha Radhakrishnan",
+        picture: null,
+      },
+      {
+        id: "11",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Aquila",
+        name: "Deepika Sankar & Rakshaya Kamini Vasutha",
+        picture: null,
+      },
+    ],
   },
   {
     id: "R2_M1",
@@ -76,6 +95,15 @@ export const badmintonWomensFixtures = [
         name: "Vidhya Vijayakumar - Aishwarya K",
         picture: null,
       },
+      {
+        id: "5",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Taurus",
+        name: "Nandhini Sakthivel - Angelin James",
+        picture: null,
+      },
     ],
   },
   {
@@ -89,7 +117,7 @@ export const badmintonWomensFixtures = [
     participants: [
       {
         id: "9",
-        resultText: null,
+        resultText: "0",
         isWinner: false,
         status: null,
         house: "Draco",
@@ -98,8 +126,8 @@ export const badmintonWomensFixtures = [
       },
       {
         id: "11",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Aquila",
         name: "Deepika Sankar & Rakshaya Kamini Vasutha",
@@ -118,8 +146,8 @@ export const badmintonWomensFixtures = [
     participants: [
       {
         id: "13",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Phoenix",
         name: "Anju P - Shradha Radhakrishnan",
@@ -127,7 +155,7 @@ export const badmintonWomensFixtures = [
       },
       {
         id: "16",
-        resultText: null,
+        resultText: "0",
         isWinner: false,
         status: null,
         house: "Draco",
@@ -205,8 +233,8 @@ export const badmintonWomensFixtures = [
     participants: [
       {
         id: "5",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Taurus",
         name: "Nandhini Sakthivel - Angelin James",
@@ -214,7 +242,7 @@ export const badmintonWomensFixtures = [
       },
       {
         id: "6",
-        resultText: null,
+        resultText: "0",
         isWinner: false,
         status: null,
         house: "Draco",
