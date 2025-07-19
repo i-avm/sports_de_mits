@@ -37,7 +37,26 @@ export const badmintonMensFixtures = [
     tournamentRoundText: "2",
     startTime: "--",
     state: null,
-    participants: [],
+    participants: [
+      {
+        id: "4",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Taurus",
+        name: "Alfin Antony - Simon N Pallan",
+        picture: null,
+      },
+      {
+        id: "1",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Aquila",
+        name: "Abin Tony T & Pattabhirami Reddy",
+        picture: null,
+      },
+    ],
   },
   {
     id: "R2_M2",
@@ -57,6 +76,15 @@ export const badmintonMensFixtures = [
         name: "Balukrishnan S - Gopal K M",
         picture: null,
       },
+      {
+        id: "7",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Taurus",
+        name: "Ajayan C - Aswin K",
+        picture: null,
+      },
     ],
   },
   {
@@ -67,7 +95,26 @@ export const badmintonMensFixtures = [
     tournamentRoundText: "2",
     startTime: "--",
     state: null,
-    participants: [],
+    participants: [
+      {
+        id: "11",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Aquila",
+        name: "Akhil V & Aaghosh T K",
+        picture: null,
+      },
+      {
+        id: "9",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Phoenix",
+        name: "Vipin Govind - Arun Raj",
+        picture: null,
+      },
+    ],
   },
   {
     id: "R2_M4",
@@ -77,7 +124,26 @@ export const badmintonMensFixtures = [
     tournamentRoundText: "2",
     startTime: "--",
     state: null,
-    participants: [],
+    participants: [
+      {
+        id: "13",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Taurus",
+        name: "Rahul P P - Sree Sai Hemanth Seeni",
+        picture: null,
+      },
+      {
+        id: "15",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Draco",
+        name: "Gurudhakshan S -Ajaykrishnan S",
+        picture: null,
+      },
+    ],
   },
   {
     id: "R1_M1",
@@ -90,8 +156,8 @@ export const badmintonMensFixtures = [
     participants: [
       {
         id: "1",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Aquila",
         name: "Abin Tony T & Pattabhirami Reddy",
@@ -99,7 +165,7 @@ export const badmintonMensFixtures = [
       },
       {
         id: "2",
-        resultText: null,
+        resultText: "0",
         isWinner: false,
         status: null,
         house: "Draco",
@@ -119,7 +185,7 @@ export const badmintonMensFixtures = [
     participants: [
       {
         id: "3",
-        resultText: null,
+        resultText: "0",
         isWinner: false,
         status: null,
         house: "Phoenix",
@@ -128,8 +194,8 @@ export const badmintonMensFixtures = [
       },
       {
         id: "4",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Taurus",
         name: "Alfin Antony - Simon N Pallan",
@@ -177,8 +243,8 @@ export const badmintonMensFixtures = [
     participants: [
       {
         id: "7",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Taurus",
         name: "Ajayan C - Aswin K",
@@ -186,7 +252,7 @@ export const badmintonMensFixtures = [
       },
       {
         id: "8",
-        resultText: null,
+        resultText: "0",
         isWinner: false,
         status: null,
         house: "Aquila",
@@ -206,8 +272,8 @@ export const badmintonMensFixtures = [
     participants: [
       {
         id: "9",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Phoenix",
         name: "Vipin Govind - Arun Raj",
@@ -215,7 +281,7 @@ export const badmintonMensFixtures = [
       },
       {
         id: "10",
-        resultText: null,
+        resultText: "1",
         isWinner: false,
         status: null,
         house: "Taurus",
@@ -235,8 +301,8 @@ export const badmintonMensFixtures = [
     participants: [
       {
         id: "11",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Aquila",
         name: "Akhil V & Aaghosh T K",
@@ -244,7 +310,7 @@ export const badmintonMensFixtures = [
       },
       {
         id: "12",
-        resultText: null,
+        resultText: "0",
         isWinner: false,
         status: null,
         house: "Draco",
@@ -264,8 +330,8 @@ export const badmintonMensFixtures = [
     participants: [
       {
         id: "13",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Taurus",
         name: "Rahul P P - Sree Sai Hemanth Seeni",
@@ -273,7 +339,7 @@ export const badmintonMensFixtures = [
       },
       {
         id: "14",
-        resultText: null,
+        resultText: "0",
         isWinner: false,
         status: null,
         house: "Aquila",
@@ -293,8 +359,8 @@ export const badmintonMensFixtures = [
     participants: [
       {
         id: "15",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Draco",
         name: "Gurudhakshan S -Ajaykrishnan S",
@@ -302,7 +368,7 @@ export const badmintonMensFixtures = [
       },
       {
         id: "16",
-        resultText: null,
+        resultText: "0",
         isWinner: false,
         status: null,
         house: "Phoenix",
