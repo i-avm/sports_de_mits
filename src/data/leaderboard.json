@@ -8,15 +8,25 @@
         { "game": "Mixed Carroms", "points": 6 },
         { "game": "Mixed Badminton", "points": 6 }
       ],
-      "Bronze": [{ "game": "Mens Carroms", "points": 4 }],
-      "Fourth": [{ "game": "Mixed Carroms", "points": 2 }]
+      "Bronze": [
+        { "game": "Mens Carroms", "points": 4 },
+        { "game": "Womens Badminton", "points": 4 },
+        { "game": "Mens Badminton", "points": 4 }
+      ],
+      "Fourth": [
+        { "game": "Mixed Carroms", "points": 2 },
+        { "game": "Womens Badminton", "points": 2 }
+      ]
     }
   },
   {
     "house": "Draco",
     "medals": {
       "Gold": [],
-      "Silver": [{ "game": "Womens Carroms", "points": 6 }],
+      "Silver": [
+        { "game": "Womens Carroms", "points": 6 },
+        { "game": "Mens Badminton", "points": 6 }
+      ],
       "Bronze": [{ "game": "Mixed Badminton", "points": 4 }],
       "Fourth": [
         { "game": "Mens Carroms", "points": 2 },
@@ -30,21 +40,28 @@
       "Gold": [
         { "game": "Mens Carroms", "points": 10 },
         { "game": "Womens Carroms", "points": 10 },
-        { "game": "Mixed Carroms", "points": 10 }
+        { "game": "Mixed Carroms", "points": 10 },
+        { "game": "Womens Badminton", "points": 10 }
       ],
       "Silver": [],
       "Bronze": [
         { "game": "Womens Carroms", "points": 4 },
         { "game": "Mixed Carroms", "points": 4 }
       ],
-      "Fourth": [{ "game": "Mixed Badminton", "points": 2 }]
+      "Fourth": [
+        { "game": "Mixed Badminton", "points": 2 },
+        { "game": "Mens Badminton", "points": 2 }
+      ]
     }
   },
   {
     "house": "Taurus",
     "medals": {
-      "Gold": [{ "game": "Mixed Badminton", "points": 10 }],
-      "Silver": [],
+      "Gold": [
+        { "game": "Mixed Badminton", "points": 10 },
+        { "game": "Mens Badminton", "points": 10 }
+      ],
+      "Silver": [{ "game": "Womens Badminton", "points": 6 }],
       "Bronze": [],
       "Fourth": []
     }

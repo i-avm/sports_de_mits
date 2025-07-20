@@ -10,7 +10,7 @@ export const badmintonMensFixtures = [
     participants: [
       {
         id: "5",
-        resultText: null,
+        resultText: "1",
         isWinner: false,
         status: null,
         house: "Draco",
@@ -19,8 +19,8 @@ export const badmintonMensFixtures = [
       },
       {
         id: "13",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Taurus",
         name: "Rahul P P - Sree Sai Hemanth Seeni",
@@ -39,8 +39,8 @@ export const badmintonMensFixtures = [
     participants: [
       {
         id: "1",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Aquila",
         name: "Abin Tony T & Pattabhirami Reddy",
@@ -48,7 +48,7 @@ export const badmintonMensFixtures = [
       },
       {
         id: "9",
-        resultText: null,
+        resultText: "0",
         isWinner: false,
         status: null,
         house: "Phoenix",
