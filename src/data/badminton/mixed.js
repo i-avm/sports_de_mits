@@ -7,7 +7,26 @@ export const badmintonMixedFixtures = [
     tournamentRoundText: "4",
     startTime: "--",
     state: null,
-    participants: [],
+    participants: [
+      {
+        id: "1",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Aquila",
+        name: "Dimpu Vanasree Marri & Abin Tony T",
+        picture: null,
+      },
+      {
+        id: "13",
+        resultText: null,
+        isWinner: false,
+        status: null,
+        house: "Taurus",
+        name: "Rahul P P - Nandhini Sakthivel",
+        picture: null,
+      },
+    ],
   },
   {
     id: "SF_M1",
@@ -20,8 +39,8 @@ export const badmintonMixedFixtures = [
     participants: [
       {
         id: "1",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Aquila",
         name: "Dimpu Vanasree Marri & Abin Tony T",
@@ -29,7 +48,7 @@ export const badmintonMixedFixtures = [
       },
       {
         id: "5",
-        resultText: null,
+        resultText: "0",
         isWinner: false,
         status: null,
         house: "Phoenix",
@@ -49,7 +68,7 @@ export const badmintonMixedFixtures = [
     participants: [
       {
         id: "9",
-        resultText: null,
+        resultText: "0",
         isWinner: false,
         status: null,
         house: "Draco",
@@ -58,8 +77,8 @@ export const badmintonMixedFixtures = [
       },
       {
         id: "13",
-        resultText: null,
-        isWinner: false,
+        resultText: "2",
+        isWinner: true,
         status: null,
         house: "Taurus",
         name: "Rahul P P - Nandhini Sakthivel",
