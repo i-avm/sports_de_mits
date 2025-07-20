@@ -110,7 +110,7 @@ export const Header = () => {
           >
             <img src="/club-logo.jpeg" alt="SDM" width={80} height={80} />
           </div>
-          {/* <div
+          <div
             className="cell"
             style={{ cursor: "pointer" }}
             onClick={onClickLeaderboard}
@@ -121,7 +121,7 @@ export const Header = () => {
               width={60}
               height={60}
             />
-          </div> */}
+          </div>
         </div>
       </div>
     </header>

@@ -5,7 +5,8 @@
       "Gold": [],
       "Silver": [
         { "game": "Mens Carroms", "points": 6 },
-        { "game": "Mixed Carroms", "points": 6 }
+        { "game": "Mixed Carroms", "points": 6 },
+        { "game": "Mixed Badminton", "points": 6 }
       ],
       "Bronze": [{ "game": "Mens Carroms", "points": 4 }],
       "Fourth": [{ "game": "Mixed Carroms", "points": 2 }]
@@ -16,7 +17,7 @@
     "medals": {
       "Gold": [],
       "Silver": [{ "game": "Womens Carroms", "points": 6 }],
-      "Bronze": [],
+      "Bronze": [{ "game": "Mixed Badminton", "points": 4 }],
       "Fourth": [
         { "game": "Mens Carroms", "points": 2 },
         { "game": "Womens Carroms", "points": 2 }
@@ -36,13 +37,13 @@
         { "game": "Womens Carroms", "points": 4 },
         { "game": "Mixed Carroms", "points": 4 }
       ],
-      "Fourth": []
+      "Fourth": [{ "game": "Mixed Badminton", "points": 2 }]
     }
   },
   {
     "house": "Taurus",
     "medals": {
-      "Gold": [],
+      "Gold": [{ "game": "Mixed Badminton", "points": 10 }],
       "Silver": [],
       "Bronze": [],
       "Fourth": []
