@@ -24,19 +24,19 @@ export default function Game() {
           <br />
         </h1>
         <Link href={`/${game}/mens/fixtures/`}>
-          <block className="bg-primary icon-indicator live_ind">
+          <block className="bg-primary icon-indicator">
             View Men's Fixtures
           </block>
         </Link>
         <br />
         <Link href={`/${game}/womens/fixtures/`}>
-          <block className="bg-primary icon-indicator live_ind">
+          <block className="bg-primary icon-indicator">
             View Women's Fixtures
           </block>
         </Link>
         <br />
         <Link href={`/${game}/mixed/fixtures/`}>
-          <block className="bg-primary icon-indicator live_ind">
+          <block className="bg-primary icon-indicator">
             View Mixed Fixtures
           </block>
         </Link>
