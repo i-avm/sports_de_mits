@@ -2,7 +2,9 @@
   {
     "house": "Aquila",
     "medals": {
-      "Gold": [],
+      "Gold": [
+        { "game": "Womens Cricket", "points": 20 }
+      ],
       "Silver": [
         { "game": "Mens Carroms", "points": 6 },
         { "game": "Mixed Carroms", "points": 6 },
@@ -11,7 +13,8 @@
       "Bronze": [
         { "game": "Mens Carroms", "points": 4 },
         { "game": "Womens Badminton", "points": 4 },
-        { "game": "Mens Badminton", "points": 4 }
+        { "game": "Mens Badminton", "points": 4 },
+        { "game": "Mens Cricket", "points": 10 }
       ],
       "Fourth": [
         { "game": "Mixed Carroms", "points": 2 },
@@ -25,9 +28,13 @@
       "Gold": [],
       "Silver": [
         { "game": "Womens Carroms", "points": 6 },
-        { "game": "Mens Badminton", "points": 6 }
+        { "game": "Mens Badminton", "points": 6 },
+        { "game": "Mens Cricket", "points": 15 }
       ],
-      "Bronze": [{ "game": "Mixed Badminton", "points": 4 }],
+      "Bronze": [
+        { "game": "Mixed Badminton", "points": 4 },
+        { "game": "Womens Cricket", "points": 10 }
+    ],
       "Fourth": [
         { "game": "Mens Carroms", "points": 2 },
         { "game": "Womens Carroms", "points": 2 }
@@ -43,14 +50,17 @@
         { "game": "Mixed Carroms", "points": 10 },
         { "game": "Womens Badminton", "points": 10 }
       ],
-      "Silver": [],
+      "Silver": [
+        { "game": "Womens Cricket", "points": 15 }
+      ],
       "Bronze": [
         { "game": "Womens Carroms", "points": 4 },
         { "game": "Mixed Carroms", "points": 4 }
       ],
       "Fourth": [
         { "game": "Mixed Badminton", "points": 2 },
-        { "game": "Mens Badminton", "points": 2 }
+        { "game": "Mens Badminton", "points": 2 },
+        { "game": "Mens Cricket", "points": 5 }
       ]
     }
   },
@@ -59,11 +69,14 @@
     "medals": {
       "Gold": [
         { "game": "Mixed Badminton", "points": 10 },
-        { "game": "Mens Badminton", "points": 10 }
+        { "game": "Mens Badminton", "points": 10 },
+        { "game": "Mens Cricket", "points": 20 }
       ],
       "Silver": [{ "game": "Womens Badminton", "points": 6 }],
       "Bronze": [],
-      "Fourth": []
+      "Fourth": [
+        { "game": "Womens Cricket", "points": 5 }
+      ]
     }
   }
 ]
